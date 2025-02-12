@@ -1,8 +1,14 @@
 import React from 'react'
+import Login from '../src/Login/Login'
 
 function login() {
   return (
-    <div>login</div>
+    <>
+     <Login/>
+    
+    </>
+   
+    
   )
 }
 

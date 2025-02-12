@@ -1,10 +1,13 @@
 import React from 'react' 
 import Home from '../src/Home/Home'
+import Sidebar from '../src/Sidebar/Sidebar'
 
 function page() {
   return (
     <> 
-        <Home />
+
+       <Sidebar/>
+        {/* <Home /> */}
     </>
   )
 }
