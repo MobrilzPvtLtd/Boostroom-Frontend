@@ -19,3 +19,19 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.custom-scrollbar {
+  /* Allows scrolling */
+  overflow: auto;
+}
+
+/* Hide the scrollbar in webkit-based browsers (Chrome, Safari, Edge) */
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: none;
+}

@@ -1,24 +1,21 @@
-"use client"
-
-import Image from "next/image";
-import Cookies from 'universal-cookie';
-import { useRouter } from 'next/navigation'
-import Login from "./src/Login/Login";
+ 
+import Image from "next/image";  
+import Home from "./src/Home/Home"; 
 
 
-export default function Home() {
-  const router = useRouter()
-  const cookies = new Cookies();
+export default function app() {
+  // const router = useRouter()
+  // const cookies = new Cookies();
   // const token = cookies.get('token');
   // if(token) {
-    router.push('/brand')
+    // router.push('/home')
   // }else{
-    // router.push('/login')
-  // }
-  // const toke =  from cookies
+  //   router.push('/login')
+  // } 
   return (
-  <>
-   
+  <> 
+ 
+      <Home/> 
   </>
   );
 }
