@@ -68,7 +68,7 @@ const Header = () => {
             <div className="flex space-x-4">
               {user ? (
                 <>
-                  <span className="text-white font-semibold flex justify-center items-center ">{user.first_name} {user.last_name}</span>
+                  <span className="text-white font-semibold flex justify-center items-center  ">{user.first_name} {user.last_name}</span>
                   <button
                     className="px-6 py-2 text-xs text-white font-semibold bg-slate-800 hover:bg-slate-700 transition-colors"
                     onClick={logout}

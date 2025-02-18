@@ -10,7 +10,6 @@ import { axiosInstance } from '@/app/utils/axios';
 import { useAuth } from '@/app/utils/AuthContext';
 import Cookies from 'universal-cookie';
 
-
 const LoginForm = () => {
   const router = useRouter();
   const cookies = new Cookies();
@@ -27,8 +26,7 @@ const LoginForm = () => {
     try {
       const response = await axiosInstance.post('/login', userData);
       if (response.data) {
-        login(response.data.authToken, response.data.user);
-        return { success: true };
+        return { success: true, data: response.data };
       } else {
         return { success: false, message: 'Login failed. Please check your credentials.' };
       }
@@ -69,6 +67,7 @@ const LoginForm = () => {
       try {
         const response = await loginUser(formData);
         if (response.success) {
+          login(response.data.authToken, response.data.user);
           router.push('/');
           e.target.reset();
         } else {
@@ -77,8 +76,6 @@ const LoginForm = () => {
       } catch (error) {
         setErrors({ login: error.message });
       }
-    } else {
-      alert('There are validation errors. Please check your input.');
     }
 
     setIsLoading(false);

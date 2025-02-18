@@ -118,7 +118,7 @@ const StarRating = ({ rating }) => (
 );
 
 const TestimonialCard = ({ name, title, rating, review }) => (
-  <div className="bg-slate-800/50 p-8 rounded-lg w-96 shrink-0 "> {/* Added w-80 and shrink-0 */}
+  <div className="bg-black/10 p-8 shadow-lg rounded-lg w-96 shrink-0 "> {/* Added w-80 and shrink-0 */}
     <div className="space-y-4">
       <div className="text-gray-400 uppercase text-sm">{name}</div>
       <h3 className="text-white text-xl font-bold">{title}</h3>
@@ -249,8 +249,8 @@ const TestimonialsSection = () => {
                     ))}
                 </div> 
             </div>
-            <div className="text-center flex justify-center w-full">
-                <button className="  bg-[#017F7B] border border-[#00D09E] text-white px-8 py-3 hover:bg-emerald-700 transition-colors uppercase font-medium">
+            <div className="text-center flex justify-center pt-6 w-full">
+                <button className="  bg-[#017F7B] border border-[#00D09E] text-white text-sm font-semibold px-6 py-3 hover:bg-emerald-700 transition-colors uppercase ">
                 Read Customer Reviews
                 </button>
             </div>
