@@ -1,22 +1,17 @@
 'use client'
- 
 
-
-import React, {R} from 'react';
+import React from 'react';
 import { Search, Bell, MessageSquare } from 'lucide-react';
 import { MdNotifications } from 'react-icons/md';
 import { FaMessage } from "react-icons/fa6";
 import Image from 'next/image';  
-import { useRouter } from 'next/navigation'
- 
- 
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/app/utils/AuthContext';
 
 const Header = () => {
-    const router = useRouter()
-  // const cookies = new Cookies();
-  // const token = cookies.get('token');
-  // if(token) {
-  // router.push('/home')
+  const router = useRouter();
+  const { user, logout } = useAuth();
+
   return (
     <header className="w-[84%] bg-[#093041] border-b shadow-xl fixed z-[50] px-10 border-slate-800">
       <div className="max-w-7xl mx-auto px-4 py-3">
@@ -36,10 +31,10 @@ const Header = () => {
 
             {/* Navigation Links */}
             <nav className="hidden md:flex space-x-6">
-              <a href="#" className= " text-sm text-slate-400 font-semibold hover:text-white transition-colors">
+              <a href="#" className="text-sm text-slate-400 font-semibold hover:text-white transition-colors">
                 HOW WE OPERATE
               </a>
-              <a href="#" className="  text-sm text-slate-400 font-semibold hover:text-white transition-colors">
+              <a href="#" className="text-sm text-slate-400 font-semibold hover:text-white transition-colors">
                 OUR PRINCIPLES
               </a>
             </nav>
@@ -65,22 +60,38 @@ const Header = () => {
                 <MdNotifications className="h-6 w-6 text-slate-300 " />
               </button>
               <button className="text-gray-400 hover:text-white transition-colors">
-                < FaMessage  className="h-5 w-5 text-slate-300 " />
+                <FaMessage className="h-5 w-5 text-slate-300 " />
               </button>
             </div>
 
             {/* Auth Buttons */}
             <div className="flex space-x-4">
-              <button className="px-6 py-2 text-xs text-white font-semibold bg-slate-800 hover:bg-slate-700 transition-colors"
-               onClick={() => {router.push('/signup')}}
-              >
-                REGISTER
-              </button>
-              <button className="px-8 py-2 text-xs font-semibold text-white bg-[#017F7B] border border-[#00D09E] hover:bg-emerald-600 transition-colors"
-               onClick={() => {router.push('/login')}}
-              >
-                LOGIN
-              </button>
+              {user ? (
+                <>
+                  <span className="text-white font-semibold flex justify-center items-center ">{user.first_name} {user.last_name}</span>
+                  <button
+                    className="px-6 py-2 text-xs text-white font-semibold bg-slate-800 hover:bg-slate-700 transition-colors"
+                    onClick={logout}
+                  >
+                    LOGOUT
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button
+                    className="px-6 py-2 text-xs text-white font-semibold bg-slate-800 hover:bg-slate-700 transition-colors"
+                    onClick={() => { router.push('/signup') }}
+                  >
+                    REGISTER
+                  </button>
+                  <button
+                    className="px-8 py-2 text-xs font-semibold text-white bg-[#017F7B] border border-[#00D09E] hover:bg-emerald-600 transition-colors"
+                    onClick={() => { router.push('/login') }}
+                  >
+                    LOGIN
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </div>
