@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { MdPlayArrow } from "react-icons/md";
 import Image from 'next/image';
-import Link from 'next/link';
-import { axiosInstance } from '@/app/utils/axios';
+import Link from 'next/link'; 
+import { axiosInstance } from '@/utils/axios';
 
 const Sidebar = () => {
   const [ services,  setServices] = useState([]);

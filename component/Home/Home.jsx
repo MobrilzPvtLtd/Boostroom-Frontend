@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React from 'react';
 import Sidebar from '../common/Sidebar';
 import Header from '../common/Header';
 import HeroSection from './HeroSection';
@@ -10,14 +10,13 @@ import GiftCardSection from './GiftCard';
 import TopUpServices from './TopUpServices';
 import HowItWorksSection from './HowItWorks';
 import TrendingServices from './TrendingServices'; 
- 
 
-const Home = () => {
+const Home = ({ services }) => {
   return (
     <>
       <div className="w-full flex">
         <div className="w-[16%] h-[100vh] overflow-auto custom-scrollbar">
-          <Sidebar  />
+          <Sidebar services={services} />
         </div>
         <div className="w-[84%] h-[100vh] overflow-auto custom-scrollbar">
           <Header />
@@ -36,9 +35,5 @@ const Home = () => {
     </>
   );
 };
-
-
-
- 
 
 export default Home;

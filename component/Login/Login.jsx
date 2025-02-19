@@ -5,10 +5,10 @@ import { Mail, Globe, EyeOff, Eye } from 'lucide-react';
 import Sidebar from '../common/Sidebar';
 import Header from '../common/Header';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { axiosInstance } from '@/app/utils/axios';
-import { useAuth } from '@/app/utils/AuthContext';
+import { useRouter } from 'next/navigation';  
 import Cookies from 'universal-cookie';
+import { axiosInstance } from '@/utils/axios';
+import { useAuth } from '@/context/AuthContext';
 
 const LoginForm = () => {
   const router = useRouter();

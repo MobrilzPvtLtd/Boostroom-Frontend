@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ['boostroom.mobrilz.digital'],
-      },
+  reactStrictMode: true,
+  images: {
+    domains: ['boostroom.mobrilz.digital'],
+  },
 };
 
 export default nextConfig;
