@@ -19,7 +19,8 @@ const Header = () => {
           {/* Left section - Logo and Navigation */}
           <div className="flex items-center space-x-8">
             {/* Logo */}
-            <div className="w-12 h-12 relative overflow-hidden ">
+            <div className="w-12 h-12 relative overflow-hidden cursor-pointer "
+              onClick={() => { router.push('/') }}>
               <Image
                 src="/image/10year.jpg"
                 alt="game"

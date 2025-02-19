@@ -5,21 +5,21 @@ import Image from 'next/image';
 import Link from 'next/link'; 
 import { axiosInstance } from '@/utils/axios';
 
-const Sidebar = () => {
-  const [ services,  setServices] = useState([]);
+const Sidebar = ({services}) => {
+  // const [ services,  setServices] = useState([]);
 
-  const fetchData = async () => {
-    try {
-      const response = await axiosInstance.get('/services');
-      setServices(response.data.services);
-    } catch (error) {
-      return { success: false, message: error.response?.data?.message || 'An error occurred. Please try again.' };
-    }
-  };
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await axiosInstance.get('/services');
+  //     setServices(response.data.services);
+  //   } catch (error) {
+  //     return { success: false, message: error.response?.data?.message || 'An error occurred. Please try again.' };
+  //   }
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []); 
+  // useEffect(() => {
+  //   fetchData();
+  // }, []); 
 
   return (
     <div className="w-full bg-[#021D26] min-h-screen px-4 pb-10 text-white">

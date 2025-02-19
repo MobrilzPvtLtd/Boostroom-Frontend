@@ -1,8 +1,6 @@
-
 import { Geist, Geist_Mono } from "next/font/google"; 
 import { axiosInstance } from "@/utils/axios";
-import Sidebar from "@/component/common/Sidebar";
-import Header from "@/component/common/Header";
+import Layout from "@/component/Layout/Layout";
 import HeroSection from "@/component/Home/HeroSection";
 import PopularServices from "@/component/Home/PopularServices";
 import TestimonialsSection from "@/component/Home/Testimonials";
@@ -26,44 +24,33 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function Home ({ services })  {
+export default function Home({ services }) {
   return (
-    <>
-      <div className="w-full flex">
-        <div className="w-[16%] h-[100vh] overflow-auto custom-scrollbar">
-          <Sidebar services={services} />
-        </div>
-        <div className="w-[84%] h-[100vh] overflow-auto custom-scrollbar">
-          <Header />
-          <div>
-            <HeroSection />
-            <PopularServices />
-            <HotGamesSection />
-            <TestimonialsSection />
-            <GiftCardSection />
-            <TopUpServices />
-            <HowItWorksSection />
-            <TrendingServices />
-            <FeatureSection />
-            <BlogSection />
-            <CTASection />
-            < Footer />
-          </div>
-        </div>
-      </div>
-    </>
+    <Layout services={services}>
+      <HeroSection />
+      <PopularServices />
+      <HotGamesSection />
+      <TestimonialsSection />
+      <GiftCardSection />
+      <TopUpServices />
+      <HowItWorksSection />
+      <TrendingServices />
+      <FeatureSection />
+      <BlogSection />
+      <CTASection />
+      <Footer />
+    </Layout>
   );
-};
+}
 
+export async function getServerSideProps() {
+  // Fetch data from an API or database
+  const res = await axiosInstance.get('/services');
+  const services = await res.data.services;
 
-// export async function getStaticProps() {
-//   // Fetch data from an API or database
-//   const res = await axiosInstance.get('/services');
-//   const services = await res.data.services
-
-//   return {
-//     props: {
-//       services,
-//     },
-//   };
-// } 
+  return {
+    props: {
+      services,
+    },
+  };
+}
