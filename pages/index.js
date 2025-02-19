@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google"; 
 import { axiosInstance } from "@/utils/axios";
-import Layout from "@/component/Layout/Layout";
+import CommonLayout, { getLayoutData } from "@/component/Layout/CommonLayout";
 import HeroSection from "@/component/Home/HeroSection";
 import PopularServices from "@/component/Home/PopularServices";
 import TestimonialsSection from "@/component/Home/Testimonials";
@@ -26,7 +26,7 @@ const geistMono = Geist_Mono({
 
 export default function Home({ services }) {
   return (
-    <Layout services={services}>
+    <CommonLayout services={services}>
       <HeroSection />
       <PopularServices />
       <HotGamesSection />
@@ -39,18 +39,17 @@ export default function Home({ services }) {
       <BlogSection />
       <CTASection />
       <Footer />
-    </Layout>
+    </CommonLayout>
   );
 }
 
-export async function getServerSideProps() {
-  // Fetch data from an API or database
-  const res = await axiosInstance.get('/services');
-  const services = await res.data.services;
-
+export async function getStaticProps() {
+  const layoutData = await getLayoutData();
+  
   return {
     props: {
-      services,
+      services: layoutData.services,
     },
+    revalidate: layoutData.revalidate,
   };
 }

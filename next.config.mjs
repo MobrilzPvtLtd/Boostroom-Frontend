@@ -2,7 +2,20 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['boostroom.mobrilz.digital'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'boostroom.mobrilz.digital',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'boostroom.mobrilz.digital',
+        port: '',
+        pathname: '/**',
+      }
+    ],
   },
 };
 
