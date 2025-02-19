@@ -183,10 +183,10 @@ const LoginForm = () => {
                 <span
                   className="font-medium text-cyan-500 cursor-pointer hover:text-cyan-400"
                   onClick={() => {
-                    router.push('/login');
+                    router.push('/signup');
                   }}
                 >
-                  Sign in
+                  Sign up
                 </span>
               </p>
               <p className="text-center text-sm text-gray-500">© 2024 Mobrilz. All rights reserved.</p>
