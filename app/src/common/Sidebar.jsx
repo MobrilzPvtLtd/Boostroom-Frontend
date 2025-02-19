@@ -1,21 +1,25 @@
-import React from 'react';
+"use client"
+import React, { useEffect, useState } from 'react';
 import { MdPlayArrow } from "react-icons/md";
-import { ChevronRight, Gamepad, CreditCard, Gift, TrendingUp, Package, Coins, Users, User, Palette, FileText } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { axiosInstance } from '@/app/utils/axios';
 
 const Sidebar = () => {
-  const services = [
-    { imgSrc: "/image/wallet.jpg", title: 'Direct Top Up' },
-    { imgSrc: "/image/games.jpg", title: 'Video Games' },
-    { imgSrc: "/image/giftcard.jpg", title: 'Gift Cards' },
-    { imgSrc: "/image/leveling.jpg", title: 'Leveling' },
-    { imgSrc: "/image/items.jpg", title: 'Items' },
-    { imgSrc: "/image/coins.jpg", title: 'Game Coins' },
-    { imgSrc: "/image/coaching.jpg", title: 'Coaching' },
-    { imgSrc: "/image/rent.jpg", title: 'Rent A Gamer' },
-    { imgSrc: "/image/skin.jpg", title: 'Skins' },
-    { imgSrc: "/image/account.jpg", title: 'Accounts' },
-  ];
+  const [ services,  setServices] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      const response = await axiosInstance.get('/services');
+      setServices(response.data.services);
+    } catch (error) {
+      return { success: false, message: error.response?.data?.message || 'An error occurred. Please try again.' };
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []); 
 
   return (
     <div className="w-full bg-[#021D26] min-h-screen px-4 pb-10 text-white">
@@ -33,39 +37,39 @@ const Sidebar = () => {
       </div>
 
       {/* Game Selection Button */}
-      <button className="w-[100%] bg-[#03364B] px-4 py-3 mb-6 flex items-center gap-2  hover:bg-slate-700 text-sm font-semibold transition-colors">
+      <button className="w-[100%] bg-[#03364B] px-4 py-3 mb-6 flex items-center gap-2 hover:bg-slate-700 text-sm font-semibold transition-colors">
         <span>Select Game / Service</span>
-        <MdPlayArrow  className="w-5 h-5 text-cyan-400 " />
+        <MdPlayArrow className="w-5 h-5 text-cyan-400" />
       </button>
 
       {/* Services Section */}
       <div className="mb-8">
-        <h2 className=" text-slate-100 font-semibold text-sm mb-4">OUR CORE SERVICES</h2>
+        <h2 className="text-slate-100 font-semibold text-sm mb-4">OUR CORE SERVICES</h2>
         <nav>
-          {services.map((service, index) => (
-            <a
+          {services?.map((service, index) => (
+            <Link
               key={index}
-              href="#"
+              href={`/${service.slugs.find(slug => slug.default).slug}`}
               className="flex items-center gap-3 p-2 hover:bg-[#083548] transition-colors mb-1"
             >
-              <span className="text-cyan-400  ">
-              <Image
-                  src={service.imgSrc}
-                  alt={service.title}
+              <span className="text-cyan-400">
+                <Image
+                  src={service.service_icon}
+                  alt={service.name}
                   width={30}
                   height={30}
                   className="text-cyan-400"
                 />
               </span>
-              <span className='text-slate-300 text-sm font-semibold '>{service.title}</span>
-            </a>
+              <span className='text-slate-300 text-sm font-semibold'>{service.name}</span>
+            </Link>
           ))}
         </nav>
       </div>
 
       {/* Work With Us Section */}
-      <div className='flex flex-col   justify-center bg-[#03364B] items-center '>
-        <div className=" h-52  relative overflow-hidden ">
+      <div className='flex flex-col justify-center bg-[#03364B] items-center'>
+        <div className="h-52 relative overflow-hidden">
           <Image
             src="/image/img2.jpg"
             alt="game"
@@ -74,7 +78,7 @@ const Sidebar = () => {
             height={100}
           />
         </div>
-        <div className=" text-center  pt-3 pb-6  ">
+        <div className="text-center pt-3 pb-6">
           <p className="text-[10px] mb-4 px-3 text-slate-300">
             We are looking for highly professional and dedicated gamers / suppliers.
           </p>

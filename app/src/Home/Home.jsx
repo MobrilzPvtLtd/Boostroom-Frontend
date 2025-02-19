@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, { useState } from 'react';
 import Sidebar from '../common/Sidebar';
 import Header from '../common/Header';
 import HeroSection from './HeroSection';
@@ -8,14 +9,15 @@ import TestimonialsSection from './Testimonials';
 import GiftCardSection from './GiftCard';
 import TopUpServices from './TopUpServices';
 import HowItWorksSection from './HowItWorks';
-import TrendingServices from './TrendingServices';
+import TrendingServices from './TrendingServices'; 
+ 
 
-function Home() {
+const Home = () => {
   return (
     <>
       <div className="w-full flex">
         <div className="w-[16%] h-[100vh] overflow-auto custom-scrollbar">
-          <Sidebar />
+          <Sidebar  />
         </div>
         <div className="w-[84%] h-[100vh] overflow-auto custom-scrollbar">
           <Header />
@@ -33,6 +35,10 @@ function Home() {
       </div>
     </>
   );
-}
+};
+
+
+
+ 
 
 export default Home;
