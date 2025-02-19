@@ -11,6 +11,10 @@ import TopUpServices from "@/component/Home/TopUpServices";
 import HowItWorksSection from "@/component/Home/HowItWorks";
 import TrendingServices from "@/component/Home/TrendingServices";
 import HotGamesSection from "@/component/Home/HotGames";
+import FeatureSection from "@/component/Home/FeatureSection";
+import BlogSection from "@/component/Home/BlogSection";
+import CTASection from "@/component/Home/CTASection";
+import Footer from "@/component/Home/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +44,10 @@ export default function Home ({ services })  {
             <TopUpServices />
             <HowItWorksSection />
             <TrendingServices />
+            <FeatureSection />
+            <BlogSection />
+            <CTASection />
+            < Footer />
           </div>
         </div>
       </div>
