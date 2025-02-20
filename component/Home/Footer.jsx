@@ -6,15 +6,15 @@ const Footer = () => {
   return (
     <footer className="bg-[#042534] text-gray-300 py-12 px-8">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/* Company Info */}
-        <div className="space-y-4">
+         {/* Company Info */}
+          <div className="space-y-4">
           <Image
             src="/image/img1.jpg"
             alt="game"
             className="w-30 h-30 object-cover"
             width={100}
             height={100}
-        />
+         />
           
           <div className="mt-6 space-y-2">
             <h3 className="text-teal-400 font-semibold mb-4">Company Info</h3>
@@ -30,10 +30,35 @@ const Footer = () => {
           <div className="mt-6">
             <h3 className="text-teal-400 font-semibold mb-4">Social Networks</h3>
             <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-red-600 rounded-md"></div>
-              <div className="w-8 h-8 bg-blue-600 rounded-md"></div>
-              <div className="w-8 h-8 bg-pink-600 rounded-md"></div>
-              <div className="w-8 h-8 bg-black rounded-md"></div>
+              <div className="w-8 h-8 rounded-md">
+                <Image 
+                 src={'/image/youtube25.png'}
+                 width={100}
+                 height={10}
+                />
+              </div>
+              <div className="w-8 h-8 bg-white rounded-md">
+              <Image 
+                 src={'/image/facebook_1.png'}
+                 width={100}
+                 height={10}
+                 className='rounded-md'
+                />
+              </div>
+              <div className="w-8 h-8  rounded-md">
+              <Image 
+                 src={'/image/instragram1.png'}
+                 width={100}
+                 height={10}
+                />
+              </div>
+              <div className="w-8 h-8 bg-white rounded-md">
+              <Image 
+                 src={'/image/tiktok.png'}
+                 width={100}
+                 height={10}
+                />
+              </div>
             </div>
           </div>
 
@@ -41,11 +66,42 @@ const Footer = () => {
           <div className="mt-6">
             <h3 className="text-teal-400 font-semibold mb-4">Contact Methods</h3>
             <div className="flex space-x-4">
-              <div className="w-8 h-8 bg-indigo-600 rounded-md"></div>
-              <div className="w-8 h-8 bg-green-500 rounded-md"></div>
-              <div className="w-8 h-8 bg-blue-500 rounded-md"></div>
-              <div className="w-8 h-8 bg-blue-600 rounded-md"></div>
-              <div className="w-8 h-8 bg-purple-600 rounded-md"></div>
+              <div className="w-8 h-8 rounded-md">
+              <Image 
+                 src={'/image/discord.png'}
+                 width={100}
+                 height={10}
+                />
+              </div>
+              
+              <div className="w-8 h-8  rounded-md">
+              <Image 
+                 src={'/image/whatsapp1.png'}
+                 width={100}
+                 height={10}
+                />
+              </div>
+              <div className="w-8 h-8  rounded-md">
+              <Image 
+                 src={'/image/messenger1.png'}
+                 width={100}
+                 height={10}
+                />
+              </div>
+              <div className="w-8 h-8  rounded-md">
+              <Image 
+                 src={'/image/skype1.png'}
+                 width={100}
+                 height={10}
+                />
+              </div>
+              <div className="w-8 h-8  rounded-md">
+              <Image 
+                 src={'/image/viber1.png'}
+                 width={100}
+                 height={10}
+                />
+              </div>
             </div>
           </div>
 
@@ -53,8 +109,20 @@ const Footer = () => {
           <div className="mt-6">
             <h3 className="text-teal-400 font-semibold mb-4">Certificates & Reviews</h3>
             <div className="space-y-4">
-              <div className="bg-white p-2 rounded-md w-32"></div>
-              <div className="bg-white p-2 rounded-md w-32"></div>
+              <div className=" p-2 rounded-md w-48">
+              <Image 
+                 src={'/image/positivessl.jpg'}
+                 width={200}
+                 height={10}
+                />
+              </div>
+              <div className=" p-2 rounded-md w-48">
+              <Image 
+                 src={'/image/googlesafe.jpg'}
+                 width={200}
+                 height={10}
+                />
+              </div>
               <div className="flex flex-col items-start ">
                 <div className='flex justify-center items-center '>
                     <IoStar  className="w-8 h-8 p-0.5  fill-current mx-0.5 text-[#21A96F]" />
