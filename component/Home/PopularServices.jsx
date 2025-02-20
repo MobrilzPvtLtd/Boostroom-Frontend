@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ServiceCard = ({ imgSrc, title }) => (
   <div className="bg-[#09384A] px-8 py-6 rounded-lg hover:bg-[#09384aee] transition-all duration-300 cursor-pointer group">
@@ -41,11 +42,16 @@ const PopularServices = ({services}) => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6">
           {services?.map((service, index) => (
+            <Link
+            key={index}
+            href={`/${service.slugs.find(slug => slug.default).slug}`} 
+          >
             <ServiceCard
               key={index}
               imgSrc={service.service_icon}
               title={service.name}
             />
+            </Link>
           ))}
         </div>
       </div>
