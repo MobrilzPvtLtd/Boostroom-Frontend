@@ -3,9 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { MdPlayArrow } from "react-icons/md";
 import Image from 'next/image';
 import Link from 'next/link'; 
+import { useRouter } from 'next/navigation'; 
 import { axiosInstance } from '@/utils/axios';
 
 const Sidebar = ({services}) => {
+    const router = useRouter();
   // const [ services,  setServices] = useState([]);
 
   // const fetchData = async () => {
@@ -25,7 +27,8 @@ const Sidebar = ({services}) => {
     <div className="w-full bg-[#021D26] min-h-screen px-4 pb-10 text-white">
       {/* Logo */}
       <div className='flex justify-center items-center '>
-        <div className="w-52 h-52 px-4 py-3 relative overflow-hidden rounded-md">
+        <div className="w-52 h-52 px-4 py-3 relative overflow-hidden rounded-md cursor-pointer "
+         onClick={() => { router.push('/') }}>
           <Image
             src="/image/img1.jpg"
             alt="game"

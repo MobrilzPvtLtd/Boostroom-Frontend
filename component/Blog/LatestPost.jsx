@@ -9,11 +9,10 @@ function LatestPost() {
   });
   return (
     <>
-      <div className="min-h-screen w-full bg-gradient-to-br from-[#042534] via-[#0a1f2d] to-[#042534] ">
+      <div className=" h-[80vh] w-full bg-[#042534]  ">
         {/* Glass-like container */}
         <div
-          className="max-w-md  backdrop-blur-sm bg-[#042534]/90 p-6 rounded-xl 
-                    border border-[#133c52]/30 shadow-2xl"
+          className="max-w-md   pt-8 pr-10 rounded-xl  "
         >
           {/* Search Section */}
           <h2 className="text-white text-xl font-semibold mb-4">
@@ -24,7 +23,7 @@ function LatestPost() {
             <input
               type="text"
               placeholder="Search blog posts"
-              className="w-full bg-[#0a1f2d] text-gray-300 pl-10 pr-4 py-3 rounded-lg 
+              className="w-full bg-[#0a1f2d] text-gray-300 pl-10 pr-4 py-2 rounded-lg 
                      border border-[#133c52] focus:outline-none
                      placeholder-gray-500 shadow-inner transition-all duration-300
                      hover:bg-[#0c2435] focus:bg-[#0c2435]"
@@ -44,7 +43,7 @@ function LatestPost() {
                          rounded-lg transition-all duration-300
                          hover:bg-[#0a1f2d]/50"
                 >
-                  <div className="relative">
+                  <div className="relative h-16 w-20">
                     <Image
                       src="/image/level_pic.jpg"
                       alt="Right gaming setup"
@@ -61,7 +60,7 @@ function LatestPost() {
                     </h3>
                     <span
                       className="text-[#ff9900] text-xs inline-block mt-1
-                                hover:text-[#ffad33] transition-colors"
+                                hover:text-[#ffad33] transition-colors bg-black/30 rounded px-2 py-1 "
                     >
                       {post.category}
                     </span>

@@ -2,39 +2,39 @@ import BlogCard from "@/component/Blog/BlogCard";
 import BlogNavbar from "@/component/Blog/BlogNavbar";
 import BlogText from "@/component/Blog/BlogText";
 import LatestPost from "@/component/Blog/LatestPost";
-import PopularTags from "@/component/Blog/PopularTag";
-import Header from "@/component/common/Header";
-import Sidebar from "@/component/common/Sidebar";
+import PopularTags from "@/component/Blog/PopularTag"; 
 import Footer from "@/component/Home/Footer";
+import CommonLayout, { getLayoutData } from "@/component/Layout/CommonLayout";
 
-export default function Home ({ services }){
-    return(
-        <>
-        
+export default function Home({ services }) {
+  return (
+    <> 
+      <CommonLayout services={services}>
+        <BlogText />
+        <BlogNavbar />
         <div className="w-full flex">
-        <div className="w-[16%] h-[100vh] overflow-auto custom-scrollbar">
-          <Sidebar services={services} />
-        </div>
-        <div className="w-[84%] h-[100vh] overflow-auto custom-scrollbar">
-          <Header />
-          <div>
-            <BlogText />
-            <BlogNavbar/>
-            <div className="w-full flex">  
-            <div className="w-[60%] "> 
-            <BlogCard/>
-            </div>
-             <div className="w-[40%] bg-[#042534]">
-
-            <LatestPost/>
-            <PopularTags/>
-             </div>
-             </div>
-            <Footer/>
+          <div className="w-[70%] ">
+            <BlogCard />
+          </div>
+          <div className="w-[30%] bg-[#042534]">
+            <LatestPost />
+            <PopularTags />
           </div>
         </div>
-      </div>
-        
-        </>
-    )
+        <Footer />
+      </CommonLayout> 
+    </>
+  )
+}
+
+
+export async function getStaticProps() {
+  const layoutData = await getLayoutData();
+
+  return {
+    props: {
+      services: layoutData.services,
+    },
+    revalidate: layoutData.revalidate,
+  };
 }

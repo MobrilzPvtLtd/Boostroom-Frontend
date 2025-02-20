@@ -28,7 +28,7 @@ export default function Home({ services }) {
   return (
     <CommonLayout services={services}>
       <HeroSection />
-      <PopularServices />
+      <PopularServices services={services} />
       <HotGamesSection />
       <TestimonialsSection />
       <GiftCardSection />

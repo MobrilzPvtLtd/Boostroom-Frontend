@@ -14,7 +14,7 @@ const tags = [
   
   export default function PopularTags() {
     return (
-      <div className="bg-[#042534] text-white p-6 rounded-lg w-full max-w-lg mx-auto">
+      <div className="bg-[#042534] text-white py-6 rounded-lg w-full max-w-lg mx-auto">
         <h2 className="text-xl font-bold mb-4">Popular Tags</h2>
         <div className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (

@@ -1,8 +1,17 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { useRouter } from 'next/navigation'; 
 
-const BlogCard = ({ date, year, title, excerpt }) => (
-  <div className="bg-black/15 rounded-lg p-8 hover:bg-[#053544] transition-colors cursor-pointer">
+const BlogCard = ({ date, year, title, excerpt }) => {
+  const router = useRouter();
+ 
+  // const handleClick = () => {
+  //   router.push(`/blog/${slug}`);
+  // };
+  return (
+  <div className="bg-black/15 rounded-lg p-8 hover:bg-[#053544] transition-colors cursor-pointer"
+  onClick={() => { router.push('/blog') }}
+  >
     {/* Date and Comments */}
     <div className="flex justify-between items-start mb-4">
       <div className="text-gray-400">
@@ -22,9 +31,9 @@ const BlogCard = ({ date, year, title, excerpt }) => (
       {excerpt}
     </p>
   </div>
-);
+)};
 
-const BlogSection = () => {
+const BlogSection = () => { 
   const blogPosts = [
     {
       date: "11/02",
@@ -60,6 +69,7 @@ const BlogSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogPosts.map((post, index) => (
             <BlogCard
+              
               key={index}
               date={post.date}
               year={post.year}

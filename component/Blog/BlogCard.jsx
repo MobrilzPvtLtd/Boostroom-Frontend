@@ -14,7 +14,7 @@ const BlogCard = () => {
   });
 
   return (
-    <div className="min-h-screen bg-[#042534] p-6">
+    <div className="min-h-screen bg-[#042534] p-10">
       <div className="grid grid-cols-1 md:grid-cols-2  gap-6 max-w-5xl mx-auto">
         {cards.map((card, index) => (
           <div key={index} className="bg-[#0a1f2d] rounded-lg overflow-hidden">
