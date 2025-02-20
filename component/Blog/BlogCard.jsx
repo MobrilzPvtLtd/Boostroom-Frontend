@@ -1,5 +1,6 @@
 
 
+import { SquareArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -58,7 +59,8 @@ const BlogCard = () => {
                 ))}
                 <div className="ml-auto">
                   <div className="w-8 h-8 bg-[#1a2b36] border-cyan-200 rounded-lg flex items-center justify-center">
-                    <span className="text-cyan-400">↗</span>
+                    
+                    <span className="text-cyan-400"><SquareArrowRight/></span>
                   </div>
                 </div>
               </div>
@@ -68,7 +70,7 @@ const BlogCard = () => {
       </div>
 
       <div className="flex justify-center mt-8">
-        <button className="bg-[#133c52] text-white px-8 py-2 rounded hover:bg-[#1a4d6a] transition-colors">
+        <button className="bg-[#017F7B] text-white px-8 py-2 rounded hover:bg-[#1a4d6a] transition-colors">
           SHOW MORE
         </button>
       </div>
