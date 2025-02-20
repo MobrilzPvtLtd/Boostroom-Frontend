@@ -1,8 +1,8 @@
+import { Search } from 'lucide-react';
 import React from 'react'
+ 
 
-import { Grid } from 'lucide-react';
-
-const GameCard = ({ title, imageSrc }) => (
+const GameCard = ({ title, imageSrc, checkOffers }) => (
   <div className="relative group overflow-hidden rounded-lg cursor-pointer">
     {/* Background Image */}
     <div 
@@ -20,6 +20,12 @@ const GameCard = ({ title, imageSrc }) => (
     <div className="absolute bottom-6 left-0 right-0 p-4 flex justify-center ">
       <h3 className="text-white text-xl font-semibold">{title}</h3>
     </div>
+    {checkOffers && (
+      <div className="absolute bottom-0 right-0  p-2 flex justify-center ">
+        <h3 className="text-white text-[9px] bg-[#017F7A] py-1 px-2 font-semibold">CHECK OFFERS</h3>
+      </div>
+    )}
+    
     
     {/* Hover Effect */}
     <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -28,27 +34,37 @@ const GameCard = ({ title, imageSrc }) => (
 
 const TrendingNews = () => {
   const games = [
-    { title: 'World of Warcraft', imageSrc: '/image/worldOfWarcraft.jpg' },
-    { title: '', imageSrc: '' },
-    { title: '', imageSrc: '' },
-    { title: '', imageSrc: '' },
-    { title: '', imageSrc: '' },
-    { title: '', imageSrc: '' },
-    { title: '', imageSrc: '' },
-    { title: '', imageSrc: '' },
-    { title: '', imageSrc: '' },
-    { title: '', imageSrc: '' },
+    { title: 'World of Warcraft', imageSrc: '/image/worldOfWarcraft.jpg', checkOffers: true },
+    { title: '', imageSrc: '' , checkOffers: false },
+    { title: '', imageSrc: ''  , checkOffers: false},
+    { title: '', imageSrc: ''  , checkOffers: false},
+    { title: '', imageSrc: ''  , checkOffers: false},
+    { title: '', imageSrc: ''  , checkOffers: false},
+    { title: '', imageSrc: ''  , checkOffers: false},
+    { title: '', imageSrc: ''  , checkOffers: false},
+    { title: '', imageSrc: ''  , checkOffers: false},
+    { title: '', imageSrc: ''  , checkOffers: false},
 
    
   ];
 
   return (
-    <div className="bg-[#042534] pb-24 px-12">
-      <div className="max-w-7xl mx-auto">
+    <div className="bg-[#042534] py-16 px-12"> 
+      <div className="flex-1 max-w-full ">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Find desired game"
+              className="w-full text-sm bg-[#03364B] text-gray-300 pl-16 pr-4 py-4 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
+            />
+            <Search className="absolute top-3 left-7 h-6 w-6 text-gray-400" />
+          </div> 
+      </div>
+      <div className="max-w-7xl mx-auto pt-10">
         {/* Section Header */}
         <div className="text-center mb-12 flex flex-col justify-center items-center">
         <h2 className="text-3xl font-bold w-fit text-slate-300 px-40 mb-6 pb-3 border-b border-[#026062]">
-           Trending News
+           Trending Now
           </h2>
           <div className="max-w-5xl mx-auto py-2 ">
             <p className="text-gray-400 mb-2">
@@ -73,6 +89,7 @@ const TrendingNews = () => {
                 key={index}
                 title={game.title}
                 imageSrc={game.imageSrc}
+                checkOffers={game.checkOffers}
               />
             )
           ))}

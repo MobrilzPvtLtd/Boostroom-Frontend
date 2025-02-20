@@ -3,30 +3,35 @@ import Sidebar from "@/component/common/Sidebar";
 import CTASection from "@/component/Home/CTASection";
 import FeatureSection from "@/component/Home/FeatureSection";
 import Footer from "@/component/Home/Footer";
+import CommonLayout, { getLayoutData } from "@/component/Layout/CommonLayout";
 import FullSelection from "@/component/Leveling/FullSelection";
-import Leveling from "@/component/Leveling/Leveling";
+import LevelingSection from "@/component/Leveling/Leveling"; 
 import TextArea from "@/component/Leveling/TextArea";
-import TrendingNews from "@/component/Leveling/TrendingNews";
+import TrendingNow from "@/component/Leveling/TrendingNow";
 
 export default function Home({ services }) {
   return (
     <>
-      <div className="w-full flex">
-        <div className="w-[16%] h-[100vh] overflow-auto custom-scrollbar">
-          <Sidebar services={services} />
-        </div>
-        <div className="w-[84%] h-[100vh] overflow-auto custom-scrollbar">
-          <Header />
-          <div>
-            <Leveling />
-            <TrendingNews />
-            <FullSelection/>
-            <TextArea/>
-            <FeatureSection/>
-            <Footer/>
-          </div>
-        </div>
-      </div>
+      <CommonLayout services={services}>
+        <LevelingSection />
+        <TrendingNow />
+        <FullSelection/>
+        <TextArea/>
+        <FeatureSection/>
+        <Footer/>
+      </CommonLayout>
     </>
   );
+}
+
+
+export async function getStaticProps() {
+  const layoutData = await getLayoutData();
+  
+  return {
+    props: {
+      services: layoutData.services,
+    },
+    revalidate: layoutData.revalidate,
+  };
 }
