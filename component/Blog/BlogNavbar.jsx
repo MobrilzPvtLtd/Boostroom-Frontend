@@ -1,7 +1,20 @@
 import React from "react";
 
 function BlogNavbar() {
-  const items = Array(12).fill("League of Legends");
+  const items = [
+    "All Cards",
+  "League of Legends",
+  "League of Legends",
+  "League of Legends",
+  "League of Legends",
+  "League of Legends",
+  "League of Legends",
+  "League of Legends",
+  "League of Legends",
+  "League of Legends",
+  "League of Legends",
+  "League of Legends",]
+    
   return (
     <>
       <div className="w-full bg-[#042534] p-2 ">

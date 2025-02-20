@@ -3,12 +3,12 @@ import React from 'react'
 function BlogText() {
   return (
     <>
-        <div className="bg-[#042534] pb-12 px-12 pt-6 rounded-lg shadow-lg mt-16">
+        <div className="bg-[#042534] pb-12  pt-6 rounded-lg shadow-lg mt-16 px-24">
             <div className="flex items-start gap-4">
               {/* Text Content */}
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-4">
-                  <h2 className="text-white text-xl font-bold">BoostRoom Blog Page</h2>
+                  <h2 className="text-white text-2xl font-bold">BoostRoom Blog Page</h2>
                   
                 </div>
                 <p className="text-gray-400 text-sm leading-relaxed">
