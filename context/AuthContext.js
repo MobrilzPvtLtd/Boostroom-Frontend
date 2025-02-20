@@ -19,17 +19,15 @@ export const AuthProvider = ({ children }) => {
     }
     if (savedUser) {
       try {
-        setUser(JSON.parse(savedUser));
+        setUser(savedUser);
       } catch (error) {
         console.error('Error parsing user data from cookies:', error);
       }
     }
   }, []);
 
-  const login = (newToken, userData) => {
-    setToken(newToken);
+  const login = ( userData) => {
     setUser(userData);
-    cookies.set('authToken', newToken, { path: '/', expires: new Date(Date.now() + 24 * 3600 * 1000) }); // Set the token with expiry (1 day)
     cookies.set('user', JSON.stringify(userData), { path: '/', expires: new Date(Date.now() + 24 * 3600 * 1000) }); // Set the user with expiry (1 day)
   };
 

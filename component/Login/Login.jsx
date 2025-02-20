@@ -1,12 +1,13 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { Mail, Globe, EyeOff, Eye } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';  
 import Cookies from 'universal-cookie';
 import { axiosInstance } from '@/utils/axios';
 import { useAuth } from '@/context/AuthContext';
+import axios from 'axios';
 
 const LoginForm = () => {
   const router = useRouter();
@@ -16,13 +17,16 @@ const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  if(token) {
-    router.push('/')
-  }
+  
+  useEffect(() => {
+    if (token) {   
+      router.push('/')
+    }
+  }, [token]);
 
   const loginUser = async (userData) => {
     try {
-      const response = await axiosInstance.post('/login', userData);
+      const response = await axios.post('/api/login', userData);
       if (response.data) {
         return { success: true, data: response.data };
       } else {
@@ -65,7 +69,7 @@ const LoginForm = () => {
       try {
         const response = await loginUser(formData);
         if (response.success) {
-          login(response.data.authToken, response.data.user);
+          login( response.data.user);
           router.push('/');
           e.target.reset();
         } else {
