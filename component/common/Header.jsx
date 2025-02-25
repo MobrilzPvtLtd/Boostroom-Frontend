@@ -39,7 +39,7 @@ const Header = () => {
                 OUR PRINCIPLES
               </a>
             </nav> */}
-                <button className="w-[100%] bg-[#F6C31C] px-4 py-2 mt-2 mb-6 flex items-center gap-2  text-black text-sm font-semibold transition-colors rounded-sm">
+                <button className="w-[100%] bg-yellow-400 px-4 py-2 mt-2 mb-6 flex items-center gap-2  text-black text-sm font-semibold transition-colors rounded-sm">
                     <span>SELECT GAME / SERVICE</span>
                     <MdPlayArrow className= "w-5 h-5 text-black" />
                   </button>

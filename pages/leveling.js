@@ -17,7 +17,7 @@ export default function Home({ services }) {
         <TrendingNow />
         <FullSelection/>
         <TextArea/>
-        <FeatureSection/>
+        {/* <FeatureSection/> */}
         <Footer/>
       </CommonLayout>
     </>

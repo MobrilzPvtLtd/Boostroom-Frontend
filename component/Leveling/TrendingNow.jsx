@@ -9,7 +9,7 @@ const GameCard = ({ title, imageSrc, checkOffers }) => (
       className="w-full h-28 bg-cover bg-center"
       style={{ 
         backgroundImage: imageSrc ? `url(${imageSrc})` : 'none',
-        backgroundColor: '#03364B'
+        backgroundColor: '#0E1237'
       }}
     />
     
@@ -28,7 +28,7 @@ const GameCard = ({ title, imageSrc, checkOffers }) => (
     
     
     {/* Hover Effect */}
-    <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    <div className="absolute inset-0 bg-cyan-500/10 opacity-0  transition-opacity duration-300" />
   </div>
 );
 
@@ -49,8 +49,8 @@ const TrendingNews = () => {
   ];
 
   return (
-    <div className="bg-[#042534] py-16 px-12"> 
-      <div className="flex-1 max-w-full ">
+    <div className="bg-dark-300 py-16 px-12"> 
+      {/* <div className="flex-1 max-w-full ">
           <div className="relative">
             <input
               type="text"
@@ -59,28 +59,28 @@ const TrendingNews = () => {
             />
             <Search className="absolute top-3 left-7 h-6 w-6 text-gray-400" />
           </div> 
-      </div>
+      </div> */}
       <div className="max-w-7xl mx-auto pt-10">
         {/* Section Header */}
         <div className="text-center mb-12 flex flex-col justify-center items-center">
-        <h2 className="text-3xl font-bold w-fit text-slate-300 px-40 mb-6 pb-3 border-b border-[#026062]">
-           Trending Now
+        <h2 className="text-3xl font-bold w-fit text-white px-40 mb-6 pb-3 border-b border-orange-300">
+           Trending Boosting
           </h2>
-          <div className="max-w-5xl mx-auto py-2 ">
+          {/* <div className="max-w-5xl mx-auto py-2 ">
             <p className="text-gray-400 mb-2">
               Browse our selection of the most popular games, handpicked for their compatibility with our services.
             </p>
             <p className="text-gray-400">
               This section highlights titles that gamers frequently choose for game keys, in-game currency top-ups, leveling, and exclusive in-game content.
             </p>
-          </div>
+          </div> */}
         </div>
 
         {/* Games Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
           {games.map((game, index) => (
             game.isViewAll ? (
-              <div key={index} className="relative rounded-lg pt-6 bg-[#03364B] hover:bg-slate-800 transition-colors duration-300 cursor-pointer h-28 flex flex-col items-center justify-center">
+              <div key={index} className="relative rounded-lg pt-6 bg-[#03364B]  transition-colors duration-300 cursor-pointer h-28 flex flex-col items-center justify-center">
                 {game.icon}
                 <span className="text-white text-lg font-medium pt-2">{game.title}</span>
               </div>

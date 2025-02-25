@@ -124,9 +124,9 @@ const BoostingServiceLayout = () => {
   const alphaLinks = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'Z', '#'];
 
   return (
-    <div className="min-h-screen bg-[#042534] text-gray-100 px-12 py-2">
+    <div className="min-h-screen bg-dark-300 text-gray-100 px-12 py-2">
       {/* Developer Info Section */}
-      <div className="mb-8 text-sm text-yellow-400">
+      {/* <div className="mb-8 text-sm text-yellow-400">
         <p className="">Info for developers:</p>
         <p>
           Sections for games goes for all letters from A up to Z with a # at the end - {' '}
@@ -138,11 +138,12 @@ const BoostingServiceLayout = () => {
           ))}
         </p>
         <p className="">I will not design rest of letters so i dont lose time on it.</p>
-      </div>
+      </div> */}
 
       {/* Main Content Sections */}
+      <div className='bg-dark-500 p-4'>  
       {sections.map((section, index) => (
-        <div key={index} className="mb-12">
+        <div key={index} className="mb-12 ">
           {section.level === 'h2' && (
             <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
           )}
@@ -159,7 +160,7 @@ const BoostingServiceLayout = () => {
           </p>
 
           {/* Banner Image - Only show after third section */}
-          {index === 2 && (
+          {/* {index === 2 && (
             <div className="relative w-full h-full my-8 overflow-hidden rounded-lg">
               <Image
             src="/image/bg244.jpg"
@@ -171,9 +172,10 @@ const BoostingServiceLayout = () => {
             priority
           />
             </div>
-          )}
+          )} */}
         </div>
       ))}
+      </div>
     </div>
   );
 };

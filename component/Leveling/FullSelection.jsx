@@ -52,41 +52,41 @@ const FullSelection = () => {
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
     ],
-    'L': [
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-    ],
-    'M': [
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-    ],
-    'P': [
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-    ],
-    'R': [
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-    ],
-    'W': [
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-    ]
+    // 'L': [
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    // ],
+    // 'M': [
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    // ],
+    // 'P': [
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    // ],
+    // 'R': [
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    // ],
+    // 'W': [
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    //   { title: '', imageSrc: ' ', checkOffers: false },
+    // ]
   };
 
   const GameCard = ({ title, imageSrc, checkOffers }) => (
@@ -95,7 +95,7 @@ const FullSelection = () => {
         className="w-full h-28 bg-cover bg-center"
         style={{ 
           backgroundImage: imageSrc ? `url(${imageSrc})` : 'none',
-          backgroundColor: '#03364B'
+          backgroundColor: '#0E1237'
         }}
       />
     
@@ -103,15 +103,15 @@ const FullSelection = () => {
         <h3 className="text-white text-xl font-semibold">{title}</h3>
       </div>
       
-      {checkOffers && (
-        <div className="absolute bottom-0 right-0 p-2 flex justify-center">
-          <h3 className="text-white text-[9px] bg-[#017F7A] py-1 px-2 font-semibold">
-            CHECK OFFERS
-          </h3>
-        </div>
-      )}
+      {/* {checkOffers && (
+        // <div className="absolute bottom-0 right-0 p-2 flex justify-center">
+        //   <h3 className="text-white text-[9px] bg-[#017F7A] py-1 px-2 font-semibold">
+        //     CHECK OFFERS
+        //   </h3>
+        // </div>
+      )} */}
       
-      <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-cyan-500/10 opacity-0  transition-opacity duration-300" />
     </div>
   );
 
@@ -119,24 +119,24 @@ const FullSelection = () => {
   const availableLetters = Object.keys(games).sort();
 
   return (
-    <div className="bg-[#042534] min-h-screen p-12">
+    <div className="bg-dark-300 min-h-screen p-12">
         <div className="text-center mb-12 flex flex-col justify-center items-center">
-         <h2 className="text-3xl font-bold w-fit text-slate-300 px-40 mb-6 pb-3 border-b border-[#026062]">
-            Full Selection
+         <h2 className="text-3xl font-bold w-fit text-white px-40 mb-6 pb-3 border-b border-orange-300">
+           All Boosting
            </h2>
-           <div className="max-w-5xl mx-auto py-2 ">
+           {/* <div className="max-w-5xl mx-auto py-2 ">
              <p className="text-gray-400 mb-2">
                Browse our selection of the most popular games, handpicked for their compatibility with our services.
              </p>
              <p className="text-gray-400">
                This section highlights titles that gamers frequently choose for game keys, in-game currency top-ups, leveling, and exclusive in-game content.
              </p>
-           </div>
+           </div> */}
          </div>
       <div className="max-w-7xl mx-auto space-y-8 ">
         {availableLetters.map((letter) => (
           <section key={letter} className="space-y-4">
-            <h2 className="text-gray-400 text-base font-semibold border-b border-[#026062] w-fit px-7">{letter}</h2>
+            <h2 className="rounded-md text-base font-semibold border border-yellow-400 w-fit px-4 text-yellow-400">{letter}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {games[letter].map((game, index) => (
                 <GameCard 
