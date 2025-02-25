@@ -24,7 +24,7 @@ const Sidebar = ({services}) => {
   // }, []); 
 
   return (
-    <div className="w-full bg-[#021D26] min-h-screen px-4 pb-10 text-white">
+    <div className="w-full bg-dark-500 min-h-screen px-4 pb-10 text-white">
       {/* Logo */}
       <div className='flex justify-center items-center '>
         <div className="w-52 h-52 px-4 py-3 relative overflow-hidden rounded-md cursor-pointer "
@@ -40,20 +40,20 @@ const Sidebar = ({services}) => {
       </div>
 
       {/* Game Selection Button */}
-      <button className="w-[100%] bg-[#03364B] px-4 py-3 mb-6 flex items-center gap-2 hover:bg-slate-700 text-sm font-semibold transition-colors">
+      {/* <button className="w-[100%] bg-[#03364B] px-4 py-3 mb-6 flex items-center gap-2 hover:bg-slate-700 text-sm font-semibold transition-colors">
         <span>Select Game / Service</span>
         <MdPlayArrow className="w-5 h-5 text-cyan-400" />
-      </button>
+      </button> */}
 
       {/* Services Section */}
       <div className="mb-8">
-        <h2 className="text-slate-100 font-semibold text-sm mb-4">OUR CORE SERVICES</h2>
+        {/* <h2 className="text-slate-100 font-semibold text-sm mb-4">OUR CORE SERVICES</h2> */}
         <nav>
           {services?.map((service, index) => (
             <Link
               key={index}
-              href={`/${service.slugs.find(slug => slug.default).slug}`}
-              className="flex items-center gap-3 p-2 hover:bg-[#083548] transition-colors mb-1"
+              href={`/${service?.slugs.find(slug => slug.default)?.slug}`}
+              className="flex items-center gap-3 p-2 hover:bg-yellow-400 transition-colors mb-1"
             >
               <span className="text-cyan-400">
                 <Image
@@ -64,7 +64,7 @@ const Sidebar = ({services}) => {
                   className="text-cyan-400"
                 />
               </span>
-              <span className='text-slate-300 text-sm font-semibold'>{service.name}</span>
+              <span className='text-white text-sm font-semibold'>{service.name}</span>
             </Link>
           ))}
         </nav>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const ServiceCard = ({ imgSrc, title }) => (
-  <div className="bg-[#09384A] px-8 py-6 rounded-lg hover:bg-[#09384aee] transition-all duration-300 cursor-pointer group">
+  <div className="bg-[#0E1237] px-8 py-6 rounded-lg  transition-all duration-300 cursor-pointer group">
     <div className="flex flex-col items-center space-y-2">
       <div className="transform h-20 w-20 p-4 group-hover:scale-110 transition-transform duration-300">
         <Image
@@ -22,11 +22,11 @@ const ServiceCard = ({ imgSrc, title }) => (
 const PopularServices = ({services}) => {
 
   return (
-    <div className="bg-[#042534] py-20 px-12">
+    <div className="bg-[#131746] py-20 px-12">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 flex flex-col justify-center items-center">
-          <h2 className="text-3xl font-bold w-fit text-slate-300 px-20 mb-6 pb-3 border-b border-[#026062]">
+          <h2 className="text-3xl font-bold w-fit text-slate-300 px-20 mb-6 pb-3 border-b border-[#8F7326]">
             View Popular Services
           </h2>
           <div className="max-w-4xl mx-auto py-2">
@@ -44,7 +44,7 @@ const PopularServices = ({services}) => {
           {services?.map((service, index) => (
             <Link
             key={index}
-            href={`/${service.slugs.find(slug => slug.default).slug}`} 
+            href={`/${service?.slugs.find(slug => slug.default)?.slug}`} 
           >
             <ServiceCard
               key={index}

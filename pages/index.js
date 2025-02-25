@@ -30,12 +30,13 @@ export default function Home({ services }) {
       <HeroSection />
       <PopularServices services={services} />
       <HotGamesSection />
-      <TestimonialsSection />
-      <GiftCardSection />
+      <FeatureSection />
+      {/* <TestimonialsSection /> */}
       <TopUpServices />
+      <GiftCardSection />
       <HowItWorksSection />
       <TrendingServices />
-      <FeatureSection />
+      
       <BlogSection />
       <CTASection />
       <Footer />

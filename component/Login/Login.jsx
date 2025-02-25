@@ -86,19 +86,26 @@ const LoginForm = () => {
   return (
     <div className="min-h-screen flex mt-10 bg-[#042634] px-28 py-16">
       <div className="hidden lg:block shadow-xl lg:w-1/2">
-        <div className="h-full relative bg-gradient-to-br from-pink-500 via-purple-500 to-cyan-500">
-          <div className="absolute inset-0 bg-black/20">
-            <Image
+        <div className="h-full relative ">
+          <div className="absolute inset-0 bg-dark-500">
+            <div className='flex flex-col justify-center items-center content-center'>
+          <h3 className="text-yellow-400 text-xl font-medium mb-4">Welcome Back</h3>
+          <h1 className="text-white text-2xl font-bold ">Enter Into Account</h1>
+          <p className="text-fuchsia-500 text-xl">
+            Continue your journey with a wide range of our services
+          </p>
+          </div>
+            {/* <Image
               src="/image/bgsignup.png"
               alt="game"
               className="absolute top-0 left-0 h-full w-full object-cover"
               width={100}
               height={100}
-            />
+            /> */}
           </div>
         </div>
       </div>
-      <div className="w-full lg:w-1/2 bg-[#031D27] shadow-xl flex flex-col justify-center px-8 lg:px-16">
+      <div className="w-full lg:w-1/2 bg-dark-500 shadow-xl flex flex-col justify-center px-8 lg:px-16">
         <div className="max-w-md w-full mx-auto space-y-8 py-8">
           <div className="text-center space-y-2">
             <h2 className="text-2xl font-bold text-white">Welcome back</h2>

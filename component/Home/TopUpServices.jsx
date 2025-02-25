@@ -8,7 +8,7 @@ const GameCard = ({ title, imageSrc }) => (
       className="w-full h-28 bg-cover bg-center"
       style={{ 
         backgroundImage: imageSrc ? `url(${imageSrc})` : 'none',
-        backgroundColor: '#03364B'
+        backgroundColor: '#0E1237'
       }}
     />
     
@@ -21,7 +21,7 @@ const GameCard = ({ title, imageSrc }) => (
     </div>
     
     {/* Hover Effect */}
-    <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    <div className="absolute inset-0 bg-cyan-500/10 opacity-0  transition-opacity duration-300" />
   </div>
 );
 
@@ -38,18 +38,18 @@ const TopUpServices = () => {
     { title: '', imageSrc: '' },
     { 
       title: 'All Top Up Services', 
-      icon: <Grid className="w-8 h-8 text-cyan-400 mb-2" />,
+      icon: <Grid className="w-8 h-8 text-yellow-400 mb-2" />,
       isViewAll: true 
     }
   ];
 
   return (
-    <div className="bg-[#042534] pb-20 pt-10 px-12">
+    <div className="bg-dark-300 pb-20 pt-10 px-12">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 flex flex-col justify-center items-center">
-        <h2 className="text-3xl font-bold w-fit text-slate-300 px-40 mb-6 pb-3 border-b border-[#026062]">
-           Top Up Services
+        <h2 className="text-3xl font-bold w-fit text-slate-300 px-40 mb-6 pb-3 border-b border-orange-300">
+          Trending Top Up Services
           </h2>
           <div className="max-w-5xl mx-auto py-2 ">
             <p className="text-gray-400 mb-2">
@@ -65,7 +65,7 @@ const TopUpServices = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
           {games.map((game, index) => (
             game.isViewAll ? (
-              <div key={index} className="relative rounded-lg pt-6 bg-[#03364B] hover:bg-slate-800 transition-colors duration-300 cursor-pointer h-28 flex flex-col items-center justify-center">
+              <div key={index} className="relative rounded-lg pt-6 bg-[#0E1237]  transition-colors duration-300 cursor-pointer h-28 flex flex-col items-center justify-center">
                 {game.icon}
                 <span className="text-white text-lg font-medium pt-2">{game.title}</span>
               </div>

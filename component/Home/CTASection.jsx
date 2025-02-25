@@ -21,12 +21,12 @@ const CTASection = () => {
           {/* Main Heading */}
           <h2 className="text-4xl md:text-4xl font-bold text-white max-w-4xl mx-auto leading-[ 3rem]">
             Are you a skilled gamer or dedicated supplier who wants to work with{' '}
-            <span className="text-teal-400">boostroom</span>?
+            <span className="text-fuchsia">masterloot</span>?
           </h2>
 
           {/* CTA Button */}
           <div>
-          <button className="  text-white px-12 py-2 text-sm font-semibold  bg-[#017F7B] border border-[#00D09E] hover:bg-emerald-600 transition-colors">
+          <button className="  text-black px-20 py-2 text-sm font-semibold  bg-yellow-400 border border-yellow-400 ">
               START EARNING TODAY
             </button>
           </div>

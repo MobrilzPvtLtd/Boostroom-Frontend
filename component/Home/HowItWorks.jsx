@@ -2,8 +2,8 @@ import Image from 'next/image';
 import React from 'react';
 
 const StepCard = ({ text }) => (
-  <div className="bg-black/20 backdrop-blur-sm p-5 rounded-lg mb-4 hover:bg-[#042534] transition-colors duration-300 cursor-pointer ">
-    <p className="text-gray-300 text-lg">{text}</p>
+  <div className="bg-dark-500 backdrop-blur-sm p-5 rounded-lg mb-4 hover:bg-yellow-400 transition-colors duration-300 cursor-pointer hover:text-black ">
+    <p className="  text-lg">{text}</p>
   </div>
 );
 
@@ -16,7 +16,7 @@ const HowItWorksSection = () => {
   ];
 
   return (
-    <div className="bg-[#042534] relative overflow-hidden ">
+    <div className="bg-dark-300 relative overflow-hidden ">
         <Image
             src="/image/testimonial.jpg"
             alt="game"
@@ -32,7 +32,7 @@ const HowItWorksSection = () => {
               <h2 className="text-3xl font-bold text-white">
                 Optimized and easy to use
               </h2>
-              <p className="text-amber-500 text-base">
+              <p className="text-yellow-500 text-base">
                 Find whatever you need within a few clicks at our gamer marketplace
               </p> 
           </div>

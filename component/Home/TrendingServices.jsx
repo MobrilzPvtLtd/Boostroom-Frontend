@@ -2,11 +2,11 @@ import React from 'react';
 import { Trophy, Grid, Coins, User } from 'lucide-react';
 
 const ServiceCard = ({ title, icon, gameList = [] }) => (
-  <div className="bg-[#003A44] rounded-lg overflow-hidden">
+  <div className="bg-dark-500 rounded-lg overflow-hidden">
     {/* Header */}
-    <div className="bg-[#004B57] p-4 flex justify-center items-center gap-3">
+    <div className="bg-yellow-400 p-4 flex justify-center items-center gap-3">
       {icon}
-      <h3 className="text-white text-xl font-semibold">{title}</h3>
+      <h3 className="text-black text-xl font-semibold">{title}</h3>
     </div>
     
     {/* Game List */}
@@ -17,7 +17,7 @@ const ServiceCard = ({ title, icon, gameList = [] }) => (
           className="flex justify-between items-center py-3 border-b border-teal-900/30 last:border-0"
         >
           <span className="text-white text-sm ">{game}</span>
-          <button className="bg-[#00606E] text-white font-extrabold text-[10px] px-2 py-1 rounded hover:bg-[#007384] transition-colors">
+          <button className="bg-dark-500 border border-yellow-400 text-white font-extrabold text-[10px] px-2 py-1 rounded  transition-colors">
             CHECK OFFERS
           </button>
         </div>
@@ -26,8 +26,8 @@ const ServiceCard = ({ title, icon, gameList = [] }) => (
     </div>
     {/* View All Link */}
     {gameList.length > 0 && (
-    <div className=" py-2 border-t border-teal-900/50  z-30">
-        <button className="text-white hover:text-teal-300 transition-colors w-full text-center">
+    <div className=" py-2 border-t border-yellow-400  z-30">
+        <button className="text-[#FC25FB]  transition-colors w-full text-center">
         View All
         </button>
     </div>
@@ -39,7 +39,7 @@ const TrendingServices = () => {
   const services = [
     {
       title: "Leveling",
-      icon: <Trophy className="w-6 h-6 text-yellow-400" />,
+      icon: <Trophy className="w-6 h-6 text-black" />,
       gameList: [
         "World of Warcraft",
         "World of Warcraft",
@@ -55,23 +55,23 @@ const TrendingServices = () => {
     },
     {
       title: "Items",
-      icon: <Grid className="w-6 h-6 text-purple-400" />,
+      icon: <Grid className="w-6 h-6 text-black" />,
       gameList: []
     },
     {
       title: "Game Coins",
-      icon: <Coins className="w-6 h-6 text-amber-400" />,
+      icon: <Coins className="w-6 h-6 text-black" />,
       gameList: []
     },
     {
       title: "Coaching",
-      icon: <User className="w-6 h-6 text-cyan-400" />,
+      icon: <User className="w-6 h-6 text-black" />,
       gameList: []
     }
   ];
 
   return (
-    <div className="bg-[#042534] py-20 px-6">
+    <div className="bg-[#131746] py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">

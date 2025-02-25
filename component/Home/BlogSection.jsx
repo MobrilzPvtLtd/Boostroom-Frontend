@@ -9,16 +9,16 @@ const BlogCard = ({ date, year, title, excerpt }) => {
   //   router.push(`/blog/${slug}`);
   // };
   return (
-  <div className="bg-black/15 rounded-lg p-8 hover:bg-[#053544] transition-colors cursor-pointer"
+  <div className="bg-black/15 rounded-lg p-8  transition-colors cursor-pointer"
   onClick={() => { router.push('/blog') }}
   >
     {/* Date and Comments */}
     <div className="flex justify-between items-start mb-4">
       <div className="text-gray-400">
-        <div className="text-xl font-bold">{date}</div>
-        <div className="text-sm">{year}</div>
+        <div className="text-xl font-bold text-yellow-400">{date}</div>
+        <div className="text-sm text-yellow-400">{year}</div>
       </div>
-      <MessageCircle className="w-6 h-6 text-green-400" />
+      {/* <MessageCircle className="w-6 h-6 text-green-400" /> */}
     </div>
 
     {/* Title */}
@@ -30,6 +30,7 @@ const BlogCard = ({ date, year, title, excerpt }) => {
     <p className="text-gray-400 leading-relaxed">
       {excerpt}
     </p>
+    <button className='bg-dark-500 border border-yellow-400 text-white font-extrabold text-[10px] px-2 py-1 rounded  transition-colors'>Read More</button>
   </div>
 )};
 
@@ -56,12 +57,12 @@ const BlogSection = () => {
   ];
 
   return (
-    <div className="bg-[#042534] py-20 px-6">
+    <div className="bg-dark-500 py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-6 pb-3 border-b border-[#026062] inline-block px-12">
-            boostroom Blog
+          <h2 className="text-3xl font-bold text-white mb-6 pb-3 border-b border-[#8F7326] inline-block px-12">
+           <span className='text-fuchsia-500'> masterloot</span>  Blog
           </h2>
         </div>
 

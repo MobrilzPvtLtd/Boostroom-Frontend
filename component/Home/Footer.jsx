@@ -4,7 +4,7 @@ import { IoStar } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#042534] text-gray-300 py-12 px-8">
+    <footer className="bg-[#0E1237] text-gray-300 py-12 px-8">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Company Info */}
         <div className="space-y-4">
@@ -17,7 +17,7 @@ const Footer = () => {
           />
 
           <div className="mt-6 space-y-2">
-            <h3 className="text-teal-400 font-semibold mb-4">Company Info</h3>
+            <h3 className="text-yellow-400 font-semibold mb-4">Company Info</h3>
             <p className="text-sm">MASTERLOOT, LLC</p>
             <p className="text-sm">
               Address: 600 N Broad Street (Suite 5 # 829)
@@ -32,12 +32,12 @@ const Footer = () => {
 
           {/* Social Networks */}
           <div className="mt-6">
-            <h3 className="text-teal-400 font-semibold mb-4">
+            <h3 className="text-yellow-400 font-semibold mb-4">
               Social Networks
             </h3>
             <div className="flex space-x-4">
-              <div className="w-8 h-8 rounded-md">
-                <Image src={"/image/youtube25.png"} width={100} height={10} />
+              <div className="w-8 h-8 rounded-md ">
+                <Image src={"/image/youtube25.png"} width={100} height={10}  />
               </div>
               <div className="w-8 h-8 bg-white rounded-md">
                 <Image
@@ -58,7 +58,7 @@ const Footer = () => {
 
           {/* Contact Methods */}
           <div className="mt-6">
-            <h3 className="text-teal-400 font-semibold mb-4">
+            <h3 className="text-yellow-400 font-semibold mb-4">
               Contact Methods
             </h3>
             <div className="flex space-x-4">
@@ -83,7 +83,7 @@ const Footer = () => {
 
           {/* Certificates */}
           <div className="mt-6">
-            <h3 className="text-teal-400 font-semibold mb-4">
+            <h3 className="text-yellow-400 font-semibold mb-4">
               Certificates & Reviews
             </h3>
             <div className="space-y-4">
@@ -120,13 +120,13 @@ const Footer = () => {
 
         {/* Information Links */}
         <div>
-          <h3 className="text-teal-400 font-semibold mb-4">Information</h3>
+          <h3 className="text-yellow-400 font-semibold mb-4">Information</h3>
           <ul className="space-y-2">
             {[...Array(12)].map((_, i) => (
               <li key={i}>
                 <a
                   href="#"
-                  className="text-sm hover:text-teal-400 transition-colors"
+                  className="text-sm hover:text-yellow-400 transition-colors"
                 >
                   Link {i + 1}
                 </a>
@@ -137,7 +137,7 @@ const Footer = () => {
 
         {/* Hot Games & Products */}
         <div>
-          <h3 className="text-teal-400 font-semibold mb-4">
+          <h3 className="text-yellow-400 font-semibold mb-4">
             Hot Games & Products
           </h3>
           <ul className="space-y-2">
@@ -145,7 +145,7 @@ const Footer = () => {
               <li key={i}>
                 <a
                   href="#"
-                  className="text-sm hover:text-teal-400 transition-colors"
+                  className="text-sm hover:text-yellow-400 transition-colors"
                 >
                   Link {i + 1}
                 </a>
@@ -156,13 +156,13 @@ const Footer = () => {
 
         {/* Legal Links */}
         <div>
-          <h3 className="text-teal-400 font-semibold mb-4">Legal</h3>
+          <h3 className="text-yellow-400 font-semibold mb-4">Legal</h3>
           <ul className="space-y-2">
             {[...Array(12)].map((_, i) => (
               <li key={i}>
                 <a
                   href="#"
-                  className="text-sm hover:text-teal-400 transition-colors"
+                  className="text-sm hover:text-yellow-400 transition-colors"
                 >
                   Link {i + 1}
                 </a>

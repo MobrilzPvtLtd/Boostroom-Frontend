@@ -25,32 +25,32 @@ const HeroSection = () => {
         </h1>
 
         {/* Subheading */}
-        <h2 className="text-[#00FFC3] text-2xl font-bold mb-8">
+        <h2 className="text-fuchsia-500 text-2xl font-bold mb-8">
           EXCELLENCE WINS
         </h2>
 
         {/* Features */}
         <div className="flex flex-wrap gap-4 mb-8">
-          <div className="flex items-center gap-2 px-3 py-1 bg-[#09384A]">
-            <Shield className="w-6 h-6 text-cyan-400" />
-            <span className="text-slate-300 text-sm font-semibold">Secured</span>
+          <div className="flex items-center gap-2 px-3 py-1 bg-yellow-400">
+            <Shield className="w-6 h-6 text-black" />
+            <span className="text-black text-sm font-semibold">Secured</span>
           </div>
-          <div className="flex items-center gap-2 px-3 py-1 bg-[#09384A]">
-            <Clock className="w-6 h-6 text-cyan-400" />
-            <span className="text-slate-300 text-sm font-semibold">24/7 Support</span>
+          <div className="flex items-center gap-2 px-3 py-1 bg-yellow-400">
+            <Clock className="w-6 h-6 text-black" />
+            <span className="text-black text-sm font-semibold">24/7 Support</span>
           </div>
-          <div className="flex items-center gap-2 px-3 py-1 bg-[#09384A]">
-            <Award className="w-6 h-6 text-cyan-400" />
-            <span className="text-slate-300 text-sm font-semibold">Top Quality</span>
+          <div className="flex items-center gap-2 px-3 py-1 bg-yellow-400">
+            <Award className="w-6 h-6 text-black" />
+            <span className="text-black text-sm font-semibold">Top Quality</span>
           </div>
-          <div className="flex items-center gap-2 px-3 py-1 bg-[#09384A]">
-            <DollarSign className="w-6 h-6 text-cyan-400" />
-            <span className="text-slate-300 text-sm font-semibold">Fair Prices</span>
+          <div className="flex items-center gap-2 px-3 py-1 bg-yellow-400">
+            <DollarSign className="w-6 h-6 text-black" />
+            <span className="text-black text-sm font-semibold">Fair Prices</span>
           </div>
         </div>
 
         {/* Trustpilot Rating */}
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <span className="text-slate-300 font-semibold">Rated</span>
           <div className="flex">
             {[...Array(5)].map((_, i) => (
@@ -69,7 +69,7 @@ const HeroSection = () => {
               Trustpilot
             </text>
           </div>
-        </div>
+        </div> */}
 
         {/* Background Decorative Elements */}
         {/* <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-purple-500/20 to-transparent" />

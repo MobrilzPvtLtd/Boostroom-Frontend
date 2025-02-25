@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Search, Bell, MessageSquare } from 'lucide-react';
-import { MdNotifications } from 'react-icons/md';
+import { MdNotifications, MdPlayArrow } from 'react-icons/md';
 import { FaMessage } from "react-icons/fa6";
 import Image from 'next/image';  
 import { useRouter } from 'next/navigation'; 
@@ -13,13 +13,13 @@ const Header = () => {
   const { user, logout } = useAuth();
 
   return (
-    <header className="w-[84%] bg-[#093041] border-b shadow-xl fixed z-[50] px-10 border-slate-800">
+    <header className="w-[84%] bg-dark-500 border-b shadow-xl fixed z-[50] px-10 border-slate-800">
       <div className="max-w-7xl mx-auto px-4 py-3">
         <div className="flex items-center gap-8 justify-between">
           {/* Left section - Logo and Navigation */}
           <div className="flex items-center space-x-8">
             {/* Logo */}
-            <div className="w-12 h-12 relative overflow-hidden cursor-pointer "
+            {/* <div className="w-12 h-12 relative overflow-hidden cursor-pointer "
               onClick={() => { router.push('/') }}>
               <Image
                 src="/image/10year.jpg"
@@ -28,17 +28,21 @@ const Header = () => {
                 width={100}
                 height={100}
               />
-            </div>
+            </div> */}
 
             {/* Navigation Links */}
-            <nav className="hidden md:flex space-x-6">
+            {/* <nav className="hidden md:flex space-x-6">
               <a href="#" className="text-sm text-slate-400 font-semibold hover:text-white transition-colors">
                 HOW WE OPERATE
               </a>
               <a href="#" className="text-sm text-slate-400 font-semibold hover:text-white transition-colors">
                 OUR PRINCIPLES
               </a>
-            </nav>
+            </nav> */}
+                <button className="w-[100%] bg-[#F6C31C] px-4 py-2 mt-2 mb-6 flex items-center gap-2  text-black text-sm font-semibold transition-colors rounded-sm">
+                    <span>SELECT GAME / SERVICE</span>
+                    <MdPlayArrow className= "w-5 h-5 text-black" />
+                  </button>
           </div>
 
           {/* Center - Search Bar */}
@@ -47,23 +51,23 @@ const Header = () => {
               <input
                 type="text"
                 placeholder="Search your service"
-                className="w-full text-sm bg-[#03364B] text-gray-300 pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="w-full text-sm bg-[#171D57] text-[#8F7326] pl-10 pr-4 py-2 focus:outline-none focus:ring-2 "
               />
-              <Search className="absolute left-3 top-2 h-5 w-5 text-gray-400" />
+              <Search className="absolute left-3 top-2 h-5 w-5 text-[#8F7326]" />
             </div>
           </div>
 
           {/* Right section - Actions */}
           <div className="flex items-center space-x-6">
             {/* Notification Icons */}
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <button className="text-gray-400 hover:text-white transition-colors">
                 <MdNotifications className="h-6 w-6 text-slate-300 " />
               </button>
               <button className="text-gray-400 hover:text-white transition-colors">
                 <FaMessage className="h-5 w-5 text-slate-300 " />
               </button>
-            </div>
+            </div> */}
 
             {/* Auth Buttons */}
             <div className="flex space-x-4">
@@ -80,13 +84,13 @@ const Header = () => {
               ) : (
                 <>
                   <button
-                    className="px-6 py-2 text-xs text-white font-semibold bg-slate-800 hover:bg-slate-700 transition-colors"
+                    className="px-6 py-2 border border-yellow-400 text-yellow-400  font-bold hover:bg-yellow-400 hover:text-navy-900 transition-colors rounded-sm"
                     onClick={() => { router.push('/signup') }}
                   >
-                    REGISTER
+                    SELL
                   </button>
                   <button
-                    className="px-8 py-2 text-xs font-semibold text-white bg-[#017F7B] border border-[#00D09E] hover:bg-emerald-600 transition-colors"
+                    className="px-8 py-2 border border-yellow-400 text-yellow-400  font-bold hover:bg-yellow-400 hover:text-navy-900 transition-colors rounded-sm"
                     onClick={() => { router.push('/login') }}
                   >
                     LOGIN

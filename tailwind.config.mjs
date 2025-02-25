@@ -11,7 +11,27 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'navy': {
+          800: '#131d38',
+          900: '#0a1427',
+        },
+        'yellow': {
+          400: '#F6C31C',
+          500: '#e5b80f',
+        },
+        'dark':{
+          300:'#131746',
+          500:'#0E1237'
+        },
+        'fuchsia': {
+          500: '#d100d1',
+        },
+        'orange':{
+          300:'#8F7326'
+        }
+
       },
+   
     },
   },
   plugins: [],
