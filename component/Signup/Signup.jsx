@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation'; 
 import { useAuth } from '@/context/AuthContext';
 import { axiosInstance } from '@/utils/axios';
+import Link from 'next/link';
 
 const SignupForm = () => {
   const router = useRouter();
@@ -102,8 +103,26 @@ const SignupForm = () => {
   return (
     <div className="min-h-screen flex mt-10 bg-[#042634] px-28 py-16">
       <div className="hidden lg:block shadow-xl lg:w-1/2">
-        <div className="h-full relative bg-gradient-to-br from-pink-500 via-purple-500 to-cyan-500">
-          <div className="absolute inset-0 bg-black/20">
+        <div className="h-full relative bg-dark-500">
+
+        <div className="absolute inset-0 top-[40%] ">
+            <div className='flex flex-col justify-start px-6 '>
+          <h3 className="text-yellow-400 text-lg font-medium mb-3">Greeting Fellow Member</h3>
+          <h1 className="text-white text-4xl font-bold  mb-3">Create Your Account</h1>
+          <p className="text-fuchsia-500 text-lg">
+           Join great marketplace and start using our awesome services
+          </p>
+          </div>
+            {/* <Image
+              src="/image/bgsignup.png"
+              alt="game"
+              className="absolute top-0 left-0 h-full w-full object-cover"
+              width={100}
+              height={100}
+            /> */}
+            
+          </div>
+          {/* <div className="absolute inset-0 bg-black/20">
             <Image
               src="/image/bgsignup.png"
               alt="game"
@@ -111,28 +130,32 @@ const SignupForm = () => {
               width={100}
               height={100}
             />
-          </div>
+          </div> */}
         </div>
       </div>
-      <div className="w-full lg:w-1/2 bg-[#031D27] shadow-xl flex flex-col justify-center px-8 lg:px-16">
+      <div className='border border-orange-300 my-3'></div>
+      <div className="w-full lg:w-1/2 bg-dark-500 shadow-xl flex flex-col justify-center px-8 lg:px-16">
         <div className="max-w-md w-full mx-auto space-y-8 py-8">
-          <div className="text-center space-y-2">
+          {/* <div className="text-center space-y-2">
             <h1 className="text-3xl font-bold text-white">Create Your Account</h1>
             <p className="text-gray-400 text-sm">
               Join great community and start using our awesome services
             </p>
-          </div>
+          </div> */}
           <form onSubmit={handleSubmit} className="mt-8 space-y-6">
             <div className="space-y-4">
+              <div className='grid grid-cols-2 gap-4'>
               <div>
                 <label htmlFor="first_name" className="block text-sm font-medium text-gray-400">
-                  First Name
+                  FIRST NAME
                 </label>
                 <input
                   id="first_name"
                   name="first_name"
                   type="text"
-                  className={`mt-1 block px-3 py-1.5 rounded w-full bg-gray-800 border-transparent focus:border-cyan-500 focus:bg-gray-900 focus:ring-0 text-white ${
+                  placeholder='First Name'
+                  
+                  className={`mt-1 block px-3 py-1.5 rounded w-full bg-gray-800 border-transparent focus:border-cyan-500 focus:bg-gray-900  focus:ring-0 text-white ${
                     errors.first_name ? 'border-red-500' : ''
                   }`}
                 />
@@ -142,12 +165,13 @@ const SignupForm = () => {
               </div>
               <div>
                 <label htmlFor="last_name" className="block text-sm font-medium text-gray-400">
-                  Last Name
+                  LAST NAME
                 </label>
                 <input
                   id="last_name"
                   name="last_name"
                   type="text"
+                  placeholder='Last Name'
                   className={`mt-1 block w-full px-3 py-1.5 rounded bg-gray-800 border-transparent focus:border-cyan-500 focus:bg-gray-900 focus:ring-0 text-white ${
                     errors.last_name ? 'border-red-500' : ''
                   }`}
@@ -156,14 +180,35 @@ const SignupForm = () => {
                   <p className="mt-1 text-sm text-red-500">{errors.last_name}</p>
                 )}
               </div>
+              </div>
+
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-400">
-                  Email Address
+                  USERNAME
                 </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
+                  placeholder='Username'
+                  className={`mt-1 block w-full px-3 py-1.5 rounded bg-gray-800 border-transparent focus:border-cyan-500 focus:bg-gray-900 focus:ring-0 text-white ${
+                    errors.email ? 'border-red-500' : ''
+                  }`}
+                />
+                {errors.email && (
+                  <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                )}
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-400">
+                  EMAIL ADDRESS
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder='Email Address'
                   className={`mt-1 block w-full px-3 py-1.5 rounded bg-gray-800 border-transparent focus:border-cyan-500 focus:bg-gray-900 focus:ring-0 text-white ${
                     errors.email ? 'border-red-500' : ''
                   }`}
@@ -174,12 +219,13 @@ const SignupForm = () => {
               </div>
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-400">
-                  Password
+                  PASSWORD
                 </label>
                 <div className="mt-1 relative">
                   <input
                     id="password"
                     name="password"
+                    placeholder='Password'
                     type={showPassword ? 'text' : 'password'}
                     className={`block w-full px-3 py-1.5 rounded bg-gray-800 border-transparent focus:border-cyan-500 focus:bg-gray-900 focus:ring-0 text-white pr-10 ${
                       errors.password ? 'border-red-500' : ''
@@ -199,12 +245,13 @@ const SignupForm = () => {
               </div>
               <div>
                 <label htmlFor="password_confirmation" className="block text-sm font-medium text-gray-400">
-                  Confirm Password
+                  CONFIRM PASSWORD
                 </label>
                 <div className="mt-1 relative">
                   <input
                     id="password_confirmation"
                     name="password_confirmation"
+                    placeholder='Confirm Password'
                     type={showConfirmPassword ? 'text' : 'password'}
                     className={`block w-full px-3 py-1.5 rounded bg-gray-800 border-transparent focus:border-cyan-500 focus:bg-gray-900 focus:ring-0 text-white pr-10 ${
                       errors.password_confirmation ? 'border-red-500' : ''
@@ -223,38 +270,75 @@ const SignupForm = () => {
                 )}
               </div>
             </div>
+            <div className="flex flex-col items-start mb-2">
+              <div className='flex mb-3'>  
+              <input
+                id="remember-me"
+                name="remember-me"
+                type="checkbox"
+                // checked={rememberMe}
+                // onChange={() => setRememberMe(!rememberMe)}
+                className="h-4 w-4 text-yellow-500 focus:outline-yellow-500  rounded"
+              />
+              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-300">
+               By Signing up you are agree and accept our <span className='text-fuchsia-500'>Terms of Use</span>
+              </label>
+              </div>
+              <div className='flex'> 
+              <input
+                id="remember-me"
+                name="remember-me"
+                type="checkbox"
+                // checked={rememberMe}
+                // onChange={() => setRememberMe(!rememberMe)}
+                className="h-4 w-4 text-yellow-500 focus:outline-yellow-500  rounded"
+              />
+              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-300">
+               Send me the latest deal and offer
+              </label>
+              </div>
+            </div>
             {errors.signup && <p className="mt-1 text-sm text-red-500">{errors.signup}</p>}
             <div>
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full flex justify-center py-3 px-4 rounded-md shadow-sm text-sm font-medium text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full flex justify-center py-3 px-4 rounded-md shadow-sm text-sm font-medium text-black bg-yellow-400  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isLoading ? 'Signing up...' : 'Sign Up'}
+                {isLoading ? 'Signing up...' : 'SIGN UP'}
               </button>
             </div>
+
+            
           </form>
+
+          <div className="mt-4 text-center">
+            <span className="text-fuchsia-500 ">
+             Already have an account? <Link href="/login" className="">Login here.</Link>
+            </span>
+            <div className='border border-orange-300 mx-6 mt-1'></div>
+          </div>
           <div className="mt-6">
             <div className="relative">
-              <div className="absolute inset-0 flex items-center">
+              {/* <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-700"></div>
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="px-2 bg-slate-900 text-gray-400">or</span>
-              </div>
+              </div> */}
             </div>
             <div className="mt-6 space-y-4">
-              <button className="w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-700 rounded-md shadow-sm text-sm font-medium text-gray-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+              <button className="w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-700 rounded-md shadow-sm text-sm font-medium text-gray-300 bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
                 <Globe className="h-5 w-5" />
                 Continue with Google
               </button>
-              <button className="w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-700 rounded-md shadow-sm text-sm font-medium text-gray-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+              <button className="w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-700 rounded-md shadow-sm text-sm font-medium text-gray-300 bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
                 <Mail className="h-5 w-5" />
                 Continue with Facebook
               </button>
             </div>
           </div>
-          <p className="text-center text-sm text-gray-400">
+          {/* <p className="text-center text-sm text-gray-400">
             Already have an account?{' '}
             <span
               className="font-medium text-cyan-500 cursor-pointer hover:text-cyan-400"
@@ -264,7 +348,7 @@ const SignupForm = () => {
             >
               Sign in
             </span>
-          </p>
+          </p> */}
           <p className="text-center text-sm text-gray-500">© 2024 Mobrilz. All rights reserved.</p>
         </div>
       </div>

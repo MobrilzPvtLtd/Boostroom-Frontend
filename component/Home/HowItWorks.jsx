@@ -46,6 +46,16 @@ const HowItWorksSection = () => {
 
             {/* Right Column - Empty space for potential image/illustration */}
             <div className="bg-black/20 rounded-md lg: w-[55%] ">
+            {/* <Image 
+            
+            src="/image/sidephoto.jpg"
+            alt="game"
+            className="absolute top-0 left-0 h-[100%] w-full object-cover"
+            width={50}
+            height={100}
+            
+            
+            /> */}
                 {/* This space is left intentionally empty to match the layout */}
             </div>
         </div>

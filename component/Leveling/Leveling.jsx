@@ -1,9 +1,11 @@
-import { BoxIcon, GrabIcon, Home } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
+import { BoxIcon, GrabIcon, Home, Search } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
 
 const LevelingSection = () => {
+  // const [searchQuery, setSearchQuery] = useState('');
+
   return (
     // <div className="relative bg-teal-950 mt-16 py-16">
     //   {/* Wave Background */}
@@ -22,7 +24,7 @@ const LevelingSection = () => {
     //       <div className="flex-1 ">
     //         {/* Title with Level Up Icon */}
     //         <div className="flex items-center gap-3 mb-6">
-    //           <h2 className="text-4xl font-bold text-white">Leveling</h2>  
+    //           <h2 className="text-4xl font-bold text-white">Leveling</h2>
     //             <div className="flex justify-center mt-0.5">
     //               <Image
     //                 src="/image/leveling.jpg"
@@ -32,7 +34,7 @@ const LevelingSection = () => {
     //                 layout="responsive"
     //                 className="object-cover "
     //                 priority
-    //               /> 
+    //               />
     //           </div>
     //         </div>
 
@@ -57,43 +59,34 @@ const LevelingSection = () => {
     //     </div>
     //   </div>
     // </div>
-     <div className="bg-dark-300 w-full mt-28">
-      <div className="px-6 py-4 flex flex-col md:flex-row md:items-center md:justify-between">
-        {/* Breadcrumb and Logo Section */}
+    <div className="bg-dark-300 w-full mt-28">
+      <div className="px-6 py-4 flex  md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col space-y-4">
-          {/* Breadcrumb */}
           <div className="flex items-center text-gray-300 text-sm">
             <Link href="/" className="hover:text-white">
               <span>
-                {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                </svg> */}
-                <Home/>
+                <Home className="text-md" />
               </span>
             </Link>
             <span className="mx-2">/</span>
-            <span className='text-md'>boosting</span>
+            <span className="text-md">boosting</span>
           </div>
-          
+
           {/* Logo and Title */}
-          <div className="flex items-center bg-dark-500">
-            <div className="mr-3">
-              {/* <UserGroupIcon className="h-6 w-6 text-white" /> */}
-              <BoxIcon />
-            </div>
-            <h1 className="text-white text-3xl font-bold">Boosting</h1>
-          </div>
         </div>
-        
-        {/* Search Bar */}
-        <div className="mt-4 md:mt-0">
+      </div>
+      <div className="grid grid-cols-2 gap-4  justify-between max-w-7xl mx-auto">
+        <div className="flex items-center bg-dark-500 p-5">
+          <span className="mr-3">
+            <BoxIcon />
+          </span>
+          <h1 className="text-white text-3xl font-bold">Boosting</h1>
+        </div>
+        <div className=" bg-dark-500 p-5">
           <div className="relative">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              {/* <MagnifyingGlassIcon className="h-5 w-5 text-gray-400" /> */}
-            </div>
             <input
               type="text"
-              className="bg-indigo-900/50 text-white placeholder-gray-400 w-full md:w-80 py-2 pl-10 pr-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="bg-indigo-900/50 text-white placeholder-gray-400 w-full md:w-100 py-2 pl-10 pr-4 rounded-lg focus:outline-none "
               placeholder="Search boosting brands"
             />
           </div>

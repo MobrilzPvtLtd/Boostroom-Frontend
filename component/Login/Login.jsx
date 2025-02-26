@@ -8,6 +8,7 @@ import Cookies from 'universal-cookie';
 import { axiosInstance } from '@/utils/axios';
 import { useAuth } from '@/context/AuthContext';
 import axios from 'axios';
+import Link from 'next/link';
 
 const LoginForm = () => {
   const router = useRouter();
@@ -86,11 +87,11 @@ const LoginForm = () => {
   return (
     <div className="min-h-screen flex mt-10 bg-[#042634] px-28 py-16">
       <div className="hidden lg:block shadow-xl lg:w-1/2">
-        <div className="h-full relative ">
-          <div className="absolute inset-0 bg-dark-500">
-            <div className='flex flex-col justify-center items-center content-center'>
-          <h3 className="text-yellow-400 text-xl font-medium mb-4">Welcome Back</h3>
-          <h1 className="text-white text-2xl font-bold ">Enter Into Account</h1>
+        <div className="h-full relative bg-dark-500">
+          <div className="absolute inset-0 top-[40%] ">
+            <div className='flex flex-col justify-start px-6 '>
+          <h3 className="text-yellow-400 text-xl font-medium mb-3">Welcome Back</h3>
+          <h1 className="text-white text-4xl font-bold  mb-3">Enter Into Account</h1>
           <p className="text-fuchsia-500 text-xl">
             Continue your journey with a wide range of our services
           </p>
@@ -102,25 +103,28 @@ const LoginForm = () => {
               width={100}
               height={100}
             /> */}
+            
           </div>
         </div>
       </div>
+      <div className='border border-orange-300 my-4'></div>
       <div className="w-full lg:w-1/2 bg-dark-500 shadow-xl flex flex-col justify-center px-8 lg:px-16">
         <div className="max-w-md w-full mx-auto space-y-8 py-8">
-          <div className="text-center space-y-2">
+          {/* <div className="text-center space-y-2">
             <h2 className="text-2xl font-bold text-white">Welcome back</h2>
-          </div>
+          </div> */}
           <form onSubmit={handleSubmit} className="mt-8 space-y-6">
             <div className="space-y-4">
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-400">
-                  Email Address
+                  EMAIL ADDRESS
                 </label>
                 <input
                   id="email"
                   name="email"
                   type="email"
-                  className={`mt-1 block w-full px-3 py-1.5 rounded bg-gray-800 border-transparent focus:border-cyan-500 focus:bg-gray-900 focus:ring-0 text-white ${
+                  placeholder='Email Address'
+                  className={`mt-1 block w-full px-3 py-1.5 rounded bg-gray-800  focus:outline-yellow-500 text-white  ${
                     errors.email ? 'border-red-500' : ''
                   }`}
                 />
@@ -128,20 +132,21 @@ const LoginForm = () => {
               </div>
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-gray-400">
-                  Password
+                  PASSWORD
                 </label>
                 <div className="mt-1 relative">
                   <input
                     id="password"
                     name="password"
+                    placeholder='Password'
                     type={showPassword ? 'text' : 'password'}
-                    className={`block w-full px-3 py-1.5 rounded bg-gray-800 border-transparent focus:border-cyan-500 focus:bg-gray-900 focus:ring-0 text-white pr-10 ${
+                    className={`block w-full px-3 py-1.5 rounded bg-gray-800  focus:outline-yellow-500   text-white pr-10 ${
                       errors.password ? 'border-red-500' : ''
                     }`}
                   />
                   <button
                     type="button"
-                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-300"
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-white hover:text-gray-300"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
@@ -149,39 +154,72 @@ const LoginForm = () => {
                 </div>
                 {errors.password && <p className="mt-1 text-sm text-red-500">{errors.password}</p>}
               </div>
+
+              <div className="flex flex-col items-start justify-between">
+            <div className="flex  items-center mb-2">
+              <input
+                id="remember-me"
+                name="remember-me"
+                type="checkbox"
+                // checked={rememberMe}
+                // onChange={() => setRememberMe(!rememberMe)}
+                className="h-4 w-4 text-yellow-500 focus:outline-yellow-500  rounded"
+              />
+              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-300">
+                Remember me
+              </label>
+            </div>
+            <div className="text-sm">
+              <Link href="/forgot-password" className="font-medium text-gray-300 hover:text-yellow-500 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+                Forgot your password?
+              </Link>
+            </div>
+          </div>
             </div>
             {errors.login && <p className="mt-1 text-sm text-red-500">{errors.login}</p>}
             <div>
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full flex justify-center py-3 px-4 rounded-md shadow-sm text-sm font-medium text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full flex justify-center py-3 px-4 border border-gray-700 rounded-md shadow-sm text-md   font-medium text-black hover: bg-yellow-500  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-400 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isLoading ? 'Login...' : 'Login'}
+                {isLoading ? 'Login...' : 'LOGIN'}
               </button>
             </div>
           </form>
+
+          <div className="mt-4 text-center">
+            <span className="text-fuchsia-500">
+              Don&apos;t have an account? <Link href="/signup" className="">Register here.</Link>
+            </span>
+            <div className='border border-orange-300 mx-3'></div>
+          </div>
+         
+          
           <div className="mt-6">
             <div className="relative">
-              <div className="absolute inset-0 flex items-center">
+              {/* <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-700"></div>
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="px-2 bg-slate-900 text-gray-400">or</span>
-              </div>
+              </div> */}
             </div>
             <div className="mt-6 space-y-4">
-              <button className="w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-700 rounded-md shadow-sm text-sm font-medium text-gray-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+              <button className="w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-700 rounded-md shadow-sm text-sm font-medium text-white bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
                 <Globe className="h-5 w-5" />
                 Continue with Google
               </button>
-              <button className="w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-700 rounded-md shadow-sm text-sm font-medium text-gray-300 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+              <button className="w-full flex items-center justify-center gap-3 px-4 py-2 border border-gray-700 rounded-md shadow-sm text-sm font-medium text-white bg-blue-500  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
                 <Mail className="h-5 w-5" />
                 Continue with Facebook
               </button>
             </div>
           </div>
-          <p className="text-center text-sm text-gray-400">
+          {/* <p className="text-center text-sm text-gray-400">
             Already have an account?{' '}
             <span
               className="font-medium text-cyan-500 cursor-pointer hover:text-cyan-400"
@@ -191,7 +229,7 @@ const LoginForm = () => {
             >
               Sign up
             </span>
-          </p>
+          </p> */}
           <p className="text-center text-sm text-gray-500">© 2024 Mobrilz. All rights reserved.</p>
         </div>
       </div>
