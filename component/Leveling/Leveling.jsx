@@ -59,8 +59,8 @@ const LevelingSection = () => {
     //     </div>
     //   </div>
     // </div>
-    <div className="bg-dark-300 w-full mt-28">
-      <div className="px-6 py-4 flex  md:flex-row md:items-center md:justify-between">
+    <div className="bg-dark-300 w-full mt-20">
+      <div className="px-6 py-6 flex  md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col space-y-4">
           <div className="flex items-center text-gray-300 text-sm">
             <Link href="/" className="hover:text-white">
