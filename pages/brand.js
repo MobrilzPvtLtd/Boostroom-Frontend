@@ -1,19 +1,13 @@
 import Brand from "@/component/Brand/Brand";
-import CommonCard from "@/component/Brand/CommonCard";
-import OfferCard from "@/component/Brand/OfferCard";
-import PromotionCard from "@/component/Brand/PromationCard";
-import CommonLayout from "@/component/Layout/CommonLayout";
-import TextArea from "@/component/Leveling/TextArea";
+
+import CommonLayout ,{ getLayoutData }from "@/component/Layout/CommonLayout";
 
 export default function Home({services}) {
     return (
         <>
       <CommonLayout services={services}>
-      <CommonCard/>
-      <PromotionCard/>
-      <OfferCard/>
-      <TextArea/>
-        {/* <Brand/> */}
+      
+        <Brand/>
       </CommonLayout>
 
    
@@ -21,4 +15,15 @@ export default function Home({services}) {
         </>
 
     );
+}
+
+export async function getStaticProps() {
+  const layoutData = await getLayoutData();
+
+  return {
+    props: {
+      services: layoutData.services,
+    },
+    revalidate: layoutData.revalidate,
+  };
 }

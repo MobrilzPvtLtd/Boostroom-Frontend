@@ -60,7 +60,7 @@ function OfferCard() {
     </div>
 
     <div className='flex justify-center bg-dark-300 pb-3'>
-            <button className='bg-yellow-500 text-black p-2 font-bold'>LOAD MORE</button>
+            <button className='bg-yellow-500 text-black p-2 px-4 font-bold rounded-sm'>LOAD MORE OFFER</button>
           </div>
 
           </>

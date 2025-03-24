@@ -1,21 +1,21 @@
 import React from "react";
 import BrandManagement from "./Brand_Section";
 import Sidebar from "../common/Sidebar";
-
+import CommonCard from "@/component/Brand/CommonCard";
+import OfferCard from "@/component/Brand/OfferCard";
+import PromotionCard from "@/component/Brand/PromationCard";
+import TextArea from "@/component/Leveling/TextArea";
+import RelatedBrand from "@/component/Brand/RelatedBrand"
 
 function Brand() {
   return (
     <> 
     
-    <div className="w-full flex">
-      <div className="w-[16%]">
-        <Sidebar/>
-      </div>
-      <div className="w-[84%] ">
-      <BrandManagement/>
-      
-      </div>
-    </div>
+    <CommonCard/>
+      <PromotionCard/>
+      <OfferCard/>
+      <RelatedBrand/>
+      <TextArea/>
     </>
   );
 }

@@ -1,10 +1,35 @@
 import Image from "next/image";
+import { useState } from "react";
 
 const PromotionCard = () => {
+
+    const [filters, setFilters] = useState({
+        region: 'EU',
+        server: 'Kazzak EU - Horde',
+        budget: 'Budget',
+      });
+      
+      const [activeFilters, setActiveFilters] = useState([
+        { label: 'Region', value: 'EU' },
+        { label: 'Server', value: 'Kazzak EU - Horde' },
+      ]);
+    
+      const handleFilterChange = (key, value) => {
+        setFilters((prev) => ({ ...prev, [key]: value }));
+        
+        if (!activeFilters.some((filter) => filter.value === value)) {
+          setActiveFilters((prev) => [...prev, { label: key, value }]);
+        }
+      };
+    
+      const removeFilter = (value) => {
+        setActiveFilters(activeFilters.filter((filter) => filter.value !== value));
+      };
   return (
     <div className="bg-dark-300 p-4">
       {/* Search Bar and Filters */}
-      <div className="w-full max-w-5xl flex flex-wrap justify-between items-center space-x-4 mb-4">
+      <div className="w-full max-w-5xl">
+      <div className="flex flex-wrap justify-between items-center space-x-4 mb-4">
         <div className="relative flex-1 min-w-[200px]">
           <input
             type="text"
@@ -26,28 +51,48 @@ const PromotionCard = () => {
             />
           </svg>
         </div>
-        <select className="p-2 rounded-lg bg-dark-500 text-white focus:outline-none">
+        <select
+          className="p-2 rounded-lg bg-dark-500 text-white focus:outline-none"
+          value={filters.region}
+          onChange={(e) => handleFilterChange('Region', e.target.value)}
+        >
           <option>EU</option>
+          <option>NA</option>
+          <option>Asia</option>
         </select>
-        <select className="p-2 rounded-lg bg-dark-500 text-white focus:outline-none">
+        <select
+          className="p-2 rounded-lg bg-dark-500 text-white focus:outline-none"
+          value={filters.server}
+          onChange={(e) => handleFilterChange('Server', e.target.value)}
+        >
           <option>Kazzak EU - Horde</option>
+          <option>Ravencrest EU - Alliance</option>
+          <option>Stormrage NA</option>
         </select>
-        <select className="p-2 rounded-lg bg-dark-500 text-white focus:outline-none">
+        <select
+          className="p-2 rounded-lg bg-dark-500 text-white focus:outline-none"
+          value={filters.budget}
+          onChange={(e) => handleFilterChange('Budget', e.target.value)}
+        >
           <option>Budget</option>
+          <option>Mid-tier</option>
+          <option>Premium</option>
         </select>
       </div>
-
+      
       {/* Filter Tags */}
       <div className="w-full max-w-4xl flex flex-wrap gap-2 mb-4">
-        <span className="px-2 bg-fuchsia-500 text-white rounded-sm flex items-center space-x-2">
-          <span className="text-sm">Region: EU</span>
-          <button className="text-white">✕</button>
-        </span>
-        <span className="px-2 bg-fuchsia-500 text-white rounded-sm flex items-center space-x-2">
-          <span className="text-sm">Server: Kazzak EU - Horde</span>
-          <button className="text-white">✕</button>
-        </span>
+        {activeFilters.map((filter) => (
+          <span
+            key={filter.value}
+            className="px-2 bg-fuchsia-500 text-white rounded-sm flex items-center space-x-2"
+          >
+            <span className="text-sm">{filter.label}: {filter.value}</span>
+            <button onClick={() => removeFilter(filter.value)} className="text-white">✕</button>
+          </span>
+        ))}
       </div>
+    </div>
 
       {/* Seller Cards - Responsive */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

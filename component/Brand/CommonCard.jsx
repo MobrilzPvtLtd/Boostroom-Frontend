@@ -12,7 +12,7 @@ function CommonCard() {
       ];
   return (
     <>
-      <div className=" bg-dark-300 mt-24">
+      <div className=" bg-dark-300 ">
       <Head >
         <title className="bg-dark-500">WoW Gold</title>
         <meta name="description" content="WOW Gold Services" />

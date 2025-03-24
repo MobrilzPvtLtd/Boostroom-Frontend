@@ -2,6 +2,7 @@ import React from 'react';
 import Sidebar from '../common/Sidebar';
 import Header from '../common/Header';
 import { axiosInstance } from "@/utils/axios";
+import Footer from '../Home/Footer';
 
 const Layout = ({ children, services }) => {
   return (
@@ -11,9 +12,10 @@ const Layout = ({ children, services }) => {
       </div>
       <div className="w-[84%] h-[100vh] overflow-auto custom-scrollbar">
         <Header />
-        <div>
+        <div className='mt-24'>
           {children}
         </div>
+        <Footer/>
       </div>
     </div>
   );
