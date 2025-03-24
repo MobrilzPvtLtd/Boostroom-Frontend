@@ -27,14 +27,14 @@ const Sidebar = ({services}) => {
     <div className="w-full bg-dark-500 min-h-screen px-4 pb-10 text-white">
       {/* Logo */}
       <div className='flex justify-center items-center '>
-        <div className="w-52 h-52 px-4 py-3 relative overflow-hidden rounded-md cursor-pointer "
+        <div className="p-5 relative overflow-hidden rounded-md cursor-pointer "
          onClick={() => { router.push('/') }}>
           <Image
-            src="/image/img1.jpg"
+            src="/image/img1.png"
             alt="game"
-            className="w-full h-full object-cover"
-            width={100}
-            height={100}
+            className="object-cover"
+            width={120}
+            height={120}
           />
         </div>
       </div>

@@ -5,7 +5,7 @@ import { IoStar } from "react-icons/io5";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full mt-20  overflow-hidden">
+    <div className="relative w-full overflow-hidden">
       <Image
         src="/image/hero.jpg"
         alt="game"

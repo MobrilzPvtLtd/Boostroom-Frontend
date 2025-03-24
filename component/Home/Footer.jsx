@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Company Info */}
         <div className="space-y-4">
           <Image
-            src="/image/img1.jpg"
+            src="/image/img1.png"
             alt="game"
             className="w-30 h-30 object-cover"
             width={100}

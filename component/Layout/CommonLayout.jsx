@@ -7,10 +7,10 @@ import Footer from '../Home/Footer';
 const Layout = ({ children, services }) => {
   return (
     <div className="w-full flex">
-      <div className="w-[16%] h-[100vh] overflow-auto custom-scrollbar">
+      <div className="w-[15%] h-[100vh] overflow-auto custom-scrollbar">
         <Sidebar services={services} />
       </div>
-      <div className="w-[84%] h-[100vh] overflow-auto custom-scrollbar">
+      <div className="w-[85%] h-[100vh] overflow-auto custom-scrollbar">
         <Header />
         <div className='mt-24'>
           {children}
