@@ -12,7 +12,7 @@ const Layout = ({ children, services }) => {
       </div>
       <div className="w-[84.5%] h-[100vh] overflow-auto custom-scrollbar">
         <Header />
-        <div className='mt-24'>
+        <div className='mt-20'>
           {children}
         </div>
         <Footer/>
