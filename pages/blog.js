@@ -3,7 +3,6 @@ import BlogNavbar from "@/component/Blog/BlogNavbar";
 import BlogText from "@/component/Blog/BlogText";
 import LatestPost from "@/component/Blog/LatestPost";
 import PopularTags from "@/component/Blog/PopularTag"; 
-import Footer from "@/component/Home/Footer";
 import CommonLayout, { getLayoutData } from "@/component/Layout/CommonLayout";
 
 export default function Home({ services }) {
@@ -20,8 +19,7 @@ export default function Home({ services }) {
             <LatestPost />
             <PopularTags />
           </div>
-        </div>
-        <Footer />
+        </div> 
       </CommonLayout> 
     </>
   )

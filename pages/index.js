@@ -11,8 +11,7 @@ import TrendingServices from "@/component/Home/TrendingServices";
 import HotGamesSection from "@/component/Home/HotGames";
 import FeatureSection from "@/component/Home/FeatureSection";
 import BlogSection from "@/component/Home/BlogSection";
-import CTASection from "@/component/Home/CTASection";
-import Footer from "@/component/Home/Footer";
+import CTASection from "@/component/Home/CTASection"; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,8 +37,7 @@ export default function Home({ services }) {
       <TrendingServices />
       
       <BlogSection />
-      <CTASection />
-      <Footer />
+      <CTASection /> 
     </CommonLayout>
   );
 }

@@ -1,8 +1,4 @@
-import Header from "@/component/common/Header";
-import Sidebar from "@/component/common/Sidebar";
-import CTASection from "@/component/Home/CTASection";
-import FeatureSection from "@/component/Home/FeatureSection";
-import Footer from "@/component/Home/Footer";
+ 
 import CommonLayout, { getLayoutData } from "@/component/Layout/CommonLayout";
 import FullSelection from "@/component/Leveling/FullSelection";
 import LevelingSection from "@/component/Leveling/Leveling"; 
@@ -17,8 +13,7 @@ export default function Home({ services }) {
         <TrendingNow />
         <FullSelection/>
         <TextArea/>
-        {/* <FeatureSection/> */}
-        <Footer/>
+        {/* <FeatureSection/> */} 
       </CommonLayout>
     </>
   );
