@@ -13,13 +13,13 @@ function CommonCard() {
   return (
     <>
       <div className=" bg-dark-300 ">
-      <Head >
+      {/* <Head >
         <title className="bg-dark-500">WoW Gold</title>
         <meta name="description" content="WOW Gold Services" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
 
-      <main className="container mx-auto p-4">
+      <main className=" p-4">
         {/* Header */}
         <h1 className="text-2xl font-bold text-white mb-6 bg-dark-500 p-3">WoW Gold</h1>
 
