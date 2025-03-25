@@ -2,7 +2,7 @@ import React from 'react';
 import Sidebar from '../common/Sidebar';
 import Header from '../common/Header';
 import { axiosInstance } from "@/utils/axios";
-import Footer from '../Home/Footer';
+import Footer from '../common/Footer';
 
 const Layout = ({ children, services }) => {
   return (
