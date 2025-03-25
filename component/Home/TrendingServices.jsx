@@ -75,7 +75,7 @@ const TrendingServices = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white mb-6 pb-3 border-b border-[#026062] inline-block px-12">
+          <h2 className="text-2xl font-bold text-white mb-6 pb-3 border-b border-[#026062] inline-block px-12">
             Trending Game Services
           </h2>
           <div className="max-w-5xl mx-auto">

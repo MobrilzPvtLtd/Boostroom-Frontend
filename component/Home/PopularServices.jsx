@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+ 
 const ServiceCard = ({ imgSrc, title }) => (
-  <div className="bg-[#0E1237] px-8 py-6 rounded-lg  transition-all duration-300 cursor-pointer group">
+  <div className="bg-[#0E1237] px-8 py-6 rounded  transition-all duration-300 cursor-pointer group">
     <div className="flex flex-col items-center space-y-2">
       <div className="transform h-20 w-20 p-4 group-hover:scale-110 transition-transform duration-300">
         <Image
@@ -26,10 +26,10 @@ const PopularServices = ({services}) => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 flex flex-col justify-center items-center">
-          <h2 className="text-3xl font-bold w-fit text-slate-300 px-20 mb-6 pb-3 border-b border-[#8F7326]">
+          <h2 className="text-2xl font-bold w-fit text-slate-100 px-20 mb-6 pb-3 border-b-2 border-[#8F7326]">
             View Popular Services
           </h2>
-          <div className="max-w-4xl mx-auto py-2">
+          <div className="max-w-4xl mx-auto text-sm font-normal tracking-wide py-2">
             <p className="text-gray-400 mb-2">
               Step into our marketplace for gamers and explore the most popular services designed to amplify your gaming experience.
             </p>
