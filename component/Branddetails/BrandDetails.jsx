@@ -7,17 +7,17 @@ import SellerList from './SellerList'
 function BrandDetails() {
   return (
     <>
-     <CommonCard/> 
-     <div className="flex gap-3">
-        <div className="md:w-[65%]">
-        <OfferDetails/>
-        </div>
-        <div className="md:w-[35%]">
+    <CommonCard />
+<div className="flex flex-col md:flex-row gap-3 bg-dark-300 ">
+  <div className="w-full md:w-[65%]">
+    <OfferDetails />
+  </div>
+  <div className="w-full md:w-[35%]">
+    <SellerInfoCard />
+  </div>
+</div>
+<SellerList />
 
-        <SellerInfoCard/>
-        </div>
-     </div>
-     <SellerList/>
      
      
     </>

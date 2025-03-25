@@ -14,25 +14,27 @@ const Header = () => {
 
   return (
     <header className="w-[85%] bg-dark-500 border-b shadow-xl fixed z-[50] px-10 border-slate-800">
-      <div className="max-w-7xl mx-auto p-8">
+      <div className="max-w-7xl mx-auto py-8 px-2">
         <div className="flex items-center gap-8 justify-between">
           <div className="flex items-center justify-center space-x-8">
-            <button className="w-[100%] bg-yellow-400 px-4 py-2 flex items-center gap-2  text-black text-sm font-semibold transition-colors rounded-sm">
+            <button className=" bg-yellow-400 px-4 py-2 flex items-center gap-2  text-black text-sm font-semibold transition-colors rounded-sm">
               <span>SELECT GAME / SERVICE</span>
-              <MdPlayArrow className="w-5 h-5 text-black" />
+              <span className="ml-2">▼</span>
+              {/* <MdPlayArrow className="w-5 h-5 text-black" /> */}
             </button>
-          </div>
-
-          <div className="flex-1 max-w-xl mx-8">
-            <div className="relative">
+            <div className="flex-1 mx-8">
+            <div className="relative  max-w-3xl">
               <input
                 type="text"
-                placeholder="Search your service"
-                className="w-full text-sm bg-[#171D57] text-[#8F7326] pl-10 pr-4 py-2 focus:outline-none focus:ring-2 "
+                placeholder="Search in masterloot"
+                className="w-full text-sm bg-[#171D57] text-white pl-10 pr-4 py-2 focus:outline-none focus:ring-1 focus:ring-yellow-400 "
               />
-              <Search className="absolute left-3 top-2 h-5 w-5 text-[#8F7326]" />
+              <Search className="absolute left-3 top-2 h-5 w-5 text-white" />
             </div>
           </div>
+          </div>
+
+     
 
           <div className="flex items-center space-x-6">
             <div className="flex space-x-4">

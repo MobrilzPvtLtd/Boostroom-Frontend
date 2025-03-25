@@ -2,11 +2,11 @@ import React from "react";
 
 const OfferDetails = () => {
   return (
-    <div className="bg-dark-500 text-white p-6 md:p-10 rounded-lg">
+    <div className="bg-dark-500 text-white p-6 md:p-10 rounded-lg ms-3">
       <h2 className="text-xl font-bold text-fuchsia-500 mb-4">Offer Information</h2>
 
       <div className="grid md:grid-cols-2 gap-4">
-        <div className="bg-[#1A1A40] p-4 rounded-lg flex items-center gap-3">
+        <div className="bg-dark-100 p-4 rounded-lg flex items-center gap-3">
           <span className="text-yellow-400">🎮</span>
           <div>
             <p className="text-gray-400 text-sm">Service</p>
@@ -14,7 +14,7 @@ const OfferDetails = () => {
           </div>
         </div>
 
-        <div className="bg-[#1A1A40] p-4 rounded-lg flex items-center gap-3">
+        <div className="bg-dark-100 p-4 rounded-lg flex items-center gap-3">
           <span className="text-yellow-400">📦</span>
           <div>
             <p className="text-gray-400 text-sm">Delivery Method</p>
@@ -22,7 +22,7 @@ const OfferDetails = () => {
           </div>
         </div>
 
-        <div className="bg-[#1A1A40] p-4 rounded-lg flex items-center gap-3">
+        <div className="bg-dark-100 p-4 rounded-lg flex items-center gap-3">
           <span className="text-yellow-400">📍</span>
           <div>
             <p className="text-gray-400 text-sm">Region</p>
@@ -30,7 +30,7 @@ const OfferDetails = () => {
           </div>
         </div>
 
-        <div className="bg-[#1A1A40] p-4 rounded-lg flex items-center gap-3">
+        <div className="bg-dark-100 p-4 rounded-lg flex items-center gap-3">
           <span className="text-yellow-400">⏳</span>
           <div>
             <p className="text-gray-400 text-sm">Delivery Time</p>
@@ -38,7 +38,7 @@ const OfferDetails = () => {
           </div>
         </div>
 
-        <div className="bg-[#1A1A40] p-4 rounded-lg flex items-center gap-3">
+        <div className="bg-dark-100 p-4 rounded-lg flex items-center gap-3">
           <span className="text-yellow-400">🖥️</span>
           <div>
             <p className="text-gray-400 text-sm">Server</p>
@@ -63,7 +63,7 @@ const OfferDetails = () => {
         <li>✅ No banned programs or exploits used—manual processing only.</li>
       </ul>
 
-      <button className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-lg">
+      <button className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-sm">
         VIEW MORE
       </button>
     </div>

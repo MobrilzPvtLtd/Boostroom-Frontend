@@ -33,7 +33,7 @@ function SellerList() {
       ];
   return (
     <>
-     <div className="bg-gray-900 text-white p-4 md:p-6 rounded-lg shadow-lg">
+     <div className="bg-dark-300 text-white p-4 md:p-6 rounded-lg shadow-lg">
       {/* Promoted Seller Section */}
       <div className="mb-6">
         <h2 className="text-sm font-semibold text-white mb-2">Promoted Seller</h2>
@@ -103,7 +103,7 @@ function SellerList() {
               />
               <div>
                 <p className="text-lg font-semibold">{seller.name}</p>
-                <p className="text-sm text-green-400">
+                <p className="text-sm text-green-500">
                   👍 {seller.orderSuccessScore} Order Success Score
                 </p>
               </div>
