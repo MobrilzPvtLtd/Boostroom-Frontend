@@ -4,7 +4,9 @@ import React, { useState } from "react";
 const StepCard = ({ text, isSelected, onClick }) => (
   <div
     className={`bg-dark-500 backdrop-blur-sm p-4 rounded transition-colors duration-300 text-sm cursor-pointer ${
-      isSelected ? "bg-yellow-400 text-black" :  "text-slate-300 hover:bg-yellow-400 hover:text-black"
+      isSelected
+        ? "bg-yellow-400 text-black"
+        : "text-slate-300 hover:bg-yellow-400 hover:text-black"
     }`}
     onClick={onClick}
   >
@@ -24,12 +26,20 @@ const HowItWorksSection = () => {
   const [selectedStep, setSelectedStep] = useState(0);
 
   return (
-    <div className="bg-dark-300 relative overflow-hidden ">
-      <img
+    <div
+      className="relative w-full overflow-hidden "
+      style={{
+        backgroundImage: "url('/image/testimonial.png')", // Set the background image
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* <img
         src="/image/testimonial.png"
         alt="game"
         className="absolute top-0 left-0 w-full object-cover"
-      />
+      /> */}
 
       <div className="max-w-8xl relative z-1 mx-auto py-16">
         {/* Left Column - Text Content */}
@@ -39,7 +49,8 @@ const HowItWorksSection = () => {
               Optimized and easy to use
             </h2>
             <p className="text-yellow-500 text-sm font-semibold">
-              Find whatever you need within a few clicks at our gamer marketplace
+              Find whatever you need within a few clicks at our gamer
+              marketplace
             </p>
           </div>
         </div>
@@ -56,12 +67,18 @@ const HowItWorksSection = () => {
           </div>
 
           {/* Right Column - Empty space for potential image/illustration */}
-          <div className="bg-black/20 rounded-md lg: w-[55%] ">
-            <img
+          <div className=" rounded-md lg: w-[55%] "
+          style={{
+            backgroundImage: "url('/image/sidephoto.jpg')", // Set the background image
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}>
+            {/* <img
               src="/image/sidephoto.jpg"
               alt="game"
               className="w-full object-cover"
-            />
+            /> */}
             {/* This space is left intentionally empty to match the layout */}
           </div>
         </div>

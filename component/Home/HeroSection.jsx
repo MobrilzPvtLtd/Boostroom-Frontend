@@ -5,15 +5,22 @@ import { IoStar } from "react-icons/io5";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full overflow-hidden">
-      <img
+<div
+      className="relative w-full overflow-hidden "
+      style={{
+        backgroundImage: "url('/image/hero.png')", // Set the background image
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >      {/* <img
         src="/image/hero.png"
         alt="game"
         className="absolute top-3 left-0 w-full object-cover"
-        // width={100}
-        // height={100}
-      />
-      <div className="max-w-7xl mx-auto pt-36 px-12 pb-28 relative z-10">
+        width={100}
+        height={100}
+      /> */}
+      <div className="max-w-7xl mx-auto pt-36 px-12 pb-24 relative z-10">
         {/* Tagline */}
         <p className="text-amber-400 text-base font-semibold mb-3">
           Never give up, stay competitive and enjoy playing.
