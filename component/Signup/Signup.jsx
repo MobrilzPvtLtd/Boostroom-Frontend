@@ -58,7 +58,7 @@ const SignupForm = () => {
       newErrors.email = "Invalid email format";
     }
 
-    // Password validation
+    // Password validations
     if (!formData.password) {
       newErrors.password = "Password is required";
     } else if (formData.password.length < 8) {
