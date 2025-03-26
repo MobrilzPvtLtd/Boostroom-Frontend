@@ -14,13 +14,13 @@ function CommonCard({title ,buttons}) {
 
         {/* Button Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {buttons.map((button, index) => (
+          {buttons?.map((button, index) => (
             <button
               key={index}
               className={`p-4 rounded-lg shadow-lg text-white flex flex-col items-center justify-center transition-transform transform hover:scale-105 bg-dark-100 hover:bg-yellow-400 hover:text-black`}
             >
-              <span className="text-lg font-semibold">{button.label}</span>
-              <span className="text-sm opacity-80">{button.count}</span>
+              <span className="text-lg font-semibold">{button?.label}</span>
+              <span className="text-sm opacity-80">{button?.count}</span>
             </button>
           ))}
         </div>
