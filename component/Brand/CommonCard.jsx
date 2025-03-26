@@ -9,7 +9,6 @@ function CommonCard({title ,buttons}) {
     
 
       <main className=" p-4">
-        {/* Header */}
         <h1 className="text-2xl font-bold text-white mb-6 bg-dark-500 p-3">{title}</h1>
 
         {/* Button Grid */}
