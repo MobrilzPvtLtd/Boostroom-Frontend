@@ -12,7 +12,7 @@ function BrandDetails() {
       <CommonCard />
       
       <div className="flex justify-end bg-dark-300 pt-6 px-6">
-        <button className="flex items-center gap-2 px-4 py-2 border-2 border-yellow-500 text-yellow-500 font-bold rounded-md bg-transparent hover:bg-yellow-500 hover:text-black transition">
+        <button className="flex text-sm items-center gap-2 px-2 py-1 border-2 border-yellow-500 text-yellow-500 font-semibold rounded-sm bg-transparent hover:bg-yellow-500 hover:text-black transition">
           <ArrowLeft size={20} />
           BACK TO FULL SELECTION
         </button>

@@ -61,7 +61,7 @@ const PromotionCard = () => {
           <option>Asia</option>
         </select>
         <select
-          className="p-2 rounded-lg bg-dark-500 text-white focus:outline-none"
+          className="p-2 rounded-lg bg-dark-500 text-white focus:outline-none text-muted"
           value={filters.server}
           onChange={(e) => handleFilterChange('Server', e.target.value)}
         >
@@ -96,7 +96,7 @@ const PromotionCard = () => {
 
       {/* Seller Cards - Responsive */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {[1, 2].map((_, index) => (
+        {[1].map((_, index) => (
           <div key={index} className="w-full bg-gray-800 rounded-lg overflow-hidden border border-blue-500">
             <div
               className="relative h-48 bg-cover bg-center"

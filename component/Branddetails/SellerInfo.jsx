@@ -61,7 +61,7 @@ const SellerInfoCard = () => {
 
       {/* Pricing Info */}
       <div className="bg-dark-500 mt-4 p-4 rounded-lg text-gray-300">
-  <div className="grid grid-cols-2 gap-4">
+  <div className="grid grid-cols-2 gap-1">
     <span className="font-bold text-muted">Stock:</span>
     <span>1000K Gold</span>
     

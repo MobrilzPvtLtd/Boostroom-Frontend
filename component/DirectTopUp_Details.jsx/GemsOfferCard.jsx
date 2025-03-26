@@ -1,12 +1,12 @@
 import { Clock4, Database, Gavel, Mail, MailIcon, MapPin, Package, Tags, Users } from "lucide-react";
 import React from "react";
 
-const OfferDetails = () => {
+const GemsOfferCard = () => {
   return (
     <div className="bg-dark-500 text-white p-6 md:p-10 rounded-lg ms-3">
       <h2 className="text-xl font-bold text-fuchsia-500 mb-4">Offer Information</h2>
-
-      <div className="flex gap-3 mb-2">  
+      <div className="grid md:grid-cols-3 gap-4">
+      {/* <div className="flex gap-3 mb-2">   */}
         <div className="bg-dark-100 p-4 rounded-lg flex items-center gap-3">
           <span className="text-yellow-400"><Tags /></span>
           <div>
@@ -19,18 +19,11 @@ const OfferDetails = () => {
           <span className="text-yellow-400"><Package /></span>
           <div>
             <p className="text-gray-400 text-sm">Delivery Method</p>
-            {/* <p className="font-semibold">  */}
-            <div className="flex justify-center items-center mt-2">
-                    <Users className="mx-1 w-4 h-4" /> Face to Face &nbsp;&nbsp;
-                    <MailIcon className="mx-1 w-4 h-4" /> Mail &nbsp;&nbsp;
-                    <Gavel className="mx-1 w-4 h-4" />Auction House
-                  </div>
-              
-              {/* </p> */}
+         
           </div>
         </div>
-        </div>
-        <div className="grid md:grid-cols-3 gap-4">
+        {/* </div> */}
+        
         <div className="bg-dark-100 p-4 rounded-lg flex items-center gap-3">
           <span className="text-yellow-400"><MapPin /></span>
           <div>
@@ -79,4 +72,4 @@ const OfferDetails = () => {
   );
 };
 
-export default OfferDetails;
+export default GemsOfferCard;
