@@ -13,7 +13,7 @@ const HeroSection = () => {
         // width={100}
         // height={100}
       />
-      <div className="max-w-7xl mx-auto pt-36 px-12 pb-24 relative z-10">
+      <div className="max-w-7xl mx-auto pt-36 px-12 pb-28 relative z-10">
         {/* Tagline */}
         <p className="text-amber-400 text-base font-semibold mb-3">
           Never give up, stay competitive and enjoy playing.

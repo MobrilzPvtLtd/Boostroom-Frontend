@@ -38,17 +38,16 @@ const FeatureSection = () => {
     return (
         <div className="bg-[#042534] relative overflow-hidden">
             {/* Background Decorative Elements */}
-            <div className="absolute right-0 top-0 w-full h-full">
-                <Image
-                    src="/image/featureSection.jpg"
+            <div className="absolute right-0 top-0 w-full">
+                <img
+                    src="/image/featureSection.png"
                     alt="game"
-                    className="absolute top-0 left-0 h-full w-full object-cover"
-                    width={100}
-                    height={100}
+                    className="absolute top-0 left-0 w-full h-[600px] object-cover"
+
                 />
             </div>
 
-            <div className="max-w-7xl mx-auto flex flex-col items-center py-16 relative z-10">
+            <div className="max-w-7xl mx-auto flex flex-col items-center py-7 relative z-10">
                 {/* Hero Content */}
                 <div className=" max-w-2xl text-center ">
                     <p className="text-yellow-500 text-sm font-semibold mb-4">
@@ -62,8 +61,8 @@ const FeatureSection = () => {
                     </button>
                 </div>
 
-                {/* Features Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 px-4">
+                {/* Features Grid */} 
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 px-4">
                     {features.map((feature, index) => (
                         <FeatureCard
                         key={index}

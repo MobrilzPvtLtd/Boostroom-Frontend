@@ -3,14 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
  
 const ServiceCard = ({ imgSrc, title }) => (
-  <div className="bg-[#0E1237] px-8 py-6 rounded  transition-all duration-300 cursor-pointer group">
+  <div className="bg-[#0E1237] px-6 py-6 rounded  transition-all duration-300 cursor-pointer group">
     <div className="flex flex-col items-center space-y-2">
       <div className="transform h-20 w-20 p-4 group-hover:scale-110 transition-transform duration-300">
         <Image
           src={imgSrc}
           alt={title}
-          width={100} // Adjust the width and height as needed
-          height={100} 
+          width={90} // Adjust the width and height as needed
+          height={90} 
           className="text-cyan-400"
         />
       </div>
@@ -22,7 +22,7 @@ const ServiceCard = ({ imgSrc, title }) => (
 const PopularServices = ({services}) => {
 
   return (
-    <div className="bg-[#131746] py-20 px-12">
+    <div className="bg-[#131746] py-20 px-6 ">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 flex flex-col justify-center items-center">
@@ -40,7 +40,7 @@ const PopularServices = ({services}) => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-5">
           {services?.map((service, index) => (
             <Link
             key={index}
