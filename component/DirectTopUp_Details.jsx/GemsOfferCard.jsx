@@ -11,7 +11,7 @@ const GemsOfferCard = () => {
           <span className="text-yellow-400"><Tags /></span>
           <div>
             <p className="text-gray-400 text-sm">Service</p>
-            <p className="font-semibold">Game Coins</p>
+            <p className="font-semibold">Direct Top Up</p>
           </div>
         </div>
 
@@ -19,7 +19,7 @@ const GemsOfferCard = () => {
           <span className="text-yellow-400"><Package /></span>
           <div>
             <p className="text-gray-400 text-sm">Delivery Method</p>
-         
+            <p className="font-semibold">direct top up</p>
           </div>
         </div>
         {/* </div> */}
@@ -28,7 +28,7 @@ const GemsOfferCard = () => {
           <span className="text-yellow-400"><MapPin /></span>
           <div>
             <p className="text-gray-400 text-sm">Region</p>
-            <p className="font-semibold">EU</p>
+            <p className="font-semibold">Global</p>
           </div>
         </div>
 
@@ -36,15 +36,15 @@ const GemsOfferCard = () => {
           <span className="text-yellow-400"><Clock4 /></span>
           <div>
             <p className="text-gray-400 text-sm">Delivery Time</p>
-            <p className="font-semibold">24 Hours</p>
+            <p className="font-semibold">15 mins</p>
           </div>
         </div>
 
         <div className="bg-dark-100 p-4 rounded-lg flex items-center gap-3">
           <span className="text-yellow-400"><Database /></span>
           <div>
-            <p className="text-gray-400 text-sm">Server</p>
-            <p className="font-semibold">Kazzak EU - Horde</p>
+            <p className="text-gray-400 text-sm">Denomination</p>
+            <p className="font-semibold">2000 Gems</p>
           </div>
         </div>
       </div>
