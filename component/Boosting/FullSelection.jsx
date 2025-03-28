@@ -4,13 +4,23 @@ import React from 'react';
 const FullSelection = () => {
   const games = {
     'A': [
-      { title: 'World of Warcraft', imageSrc: '/image/worldOfWarcraft.jpg', checkOffers: true  },
+      { title: "World of Warcraft", imageSrc: "/image/worldOfWarcraft.png" },
+      { title: "Valorant", imageSrc: "/image/valorent.png" },
+      { title: '', imageSrc: ' ', checkOffers: false },
+      { title: '', imageSrc: ' ', checkOffers: false },
+      { title: '', imageSrc: ' ', checkOffers: false },
+      { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
     ],
     'B': [
+      { title: '', imageSrc: ' ', checkOffers: false },
+      { title: '', imageSrc: ' ', checkOffers: false },
+      { title: '', imageSrc: ' ', checkOffers: false },
+      { title: '', imageSrc: ' ', checkOffers: false },
+      { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
@@ -23,74 +33,17 @@ const FullSelection = () => {
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
-    ],
-    'D': [
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
       { title: '', imageSrc: ' ', checkOffers: false },
     ],
-    'E': [
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-    ],
-    'F': [
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-    ],
-    'G': [
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-      { title: '', imageSrc: ' ', checkOffers: false },
-    ],
-    // 'L': [
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    // ],
-    // 'M': [
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    // ],
-    // 'P': [
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    // ],
-    // 'R': [
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    // ],
-    // 'W': [
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    //   { title: '', imageSrc: ' ', checkOffers: false },
-    // ]
+ 
   };
 
   const GameCard = ({ title, imageSrc, checkOffers }) => (
-    <div className="relative group overflow-hidden rounded-lg cursor-pointer">
+    <div className="relative group overflow-hidden rounded cursor-pointer">
       <div 
         className="w-full h-28 bg-cover bg-center"
         style={{ 

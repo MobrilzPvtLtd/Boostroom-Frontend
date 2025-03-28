@@ -1,9 +1,9 @@
  
 import CommonLayout, { getLayoutData } from "@/component/Layout/CommonLayout";
-import FullSelection from "@/component/Leveling/FullSelection";
-import LevelingSection from "@/component/Leveling/Leveling"; 
-import TextArea from "@/component/Leveling/TextArea";
-import TrendingNow from "@/component/Leveling/TrendingNow";
+import FullSelection from "@/component/Boosting/FullSelection";
+import LevelingSection from "@/component/Boosting/Leveling"; 
+import TextArea from "@/component/Boosting/TextArea";
+import TrendingNow from "@/component/Boosting/TrendingNow";
 
 export default function Home({ services }) {
   return (

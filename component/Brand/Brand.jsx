@@ -4,7 +4,7 @@ import Sidebar from "../common/Sidebar";
 import CommonCard from "@/component/Brand/CommonCard";
 import OfferCard from "@/component/Brand/OfferCard";
 import PromotionCard from "@/component/Brand/PromationCard";
-import TextArea from "@/component/Leveling/TextArea";
+import TextArea from "@/component/Boosting/TextArea";
 import RelatedBrand from "@/component/Brand/RelatedBrand"
 
 function Brand() {

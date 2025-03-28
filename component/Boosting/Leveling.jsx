@@ -83,12 +83,13 @@ const LevelingSection = () => {
           <h1 className="text-white text-3xl font-bold">Boosting</h1>
         </div>
         <div className=" bg-dark-500 p-5">
-          <div className="relative">
+          <div className="relative w-full">
             <input
               type="text"
-              className="bg-indigo-900/50 text-white placeholder-gray-400 w-full md:w-100 py-2 pl-10 pr-4 rounded-lg focus:outline-none "
-              placeholder="Search boosting brands"
+              placeholder="Search bossting brand"
+              className="w-full text-xs bg-[#171D57] text-slate-600 pl-10 pr-4 py-2.5 focus:outline-none focus:ring-1 focus:ring-yellow-400  rounded "
             />
+            <Search className="absolute left-3 top-2 h-5 w-5 text-white" />
           </div>
         </div>
       </div>
