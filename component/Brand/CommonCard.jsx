@@ -16,7 +16,7 @@ function CommonCard({title ,buttons}) {
           {buttons?.map((button, index) => (
             <button
               key={index}
-              className={`p-4 rounded-lg shadow-lg text-white flex flex-col items-center justify-center transition-transform transform hover:scale-105 bg-dark-100 hover:bg-yellow-400 hover:text-black`}
+              className={`p-4 rounded shadow-lg text-white flex flex-col items-center justify-center transition-transform transform hover:scale-105 bg-dark-100 hover:bg-yellow-400 hover:text-black`}
             >
               <span className="text-lg font-semibold">{button?.label}</span>
               <span className="text-sm opacity-80">{button?.count}</span>

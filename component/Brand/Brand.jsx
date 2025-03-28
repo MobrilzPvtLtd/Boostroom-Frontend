@@ -12,14 +12,14 @@ function Brand() {
     { label: "Game Coins", count: "12560 offers" },
     { label: "Boosting", count: "200 offers" },
     { label: "Coaching", count: "60 offers" },
-    { label: "Items", count: "100MO offers" },
+    { label: "Items", count: "100 offers" },
     { label: "Accounts", count: "5 offers" },
     { label: "Rent A Gamer", count: "5 offers" },
   ];
   return (
     <> 
     
-    <CommonCard  title="WoW Gold" buttons={buttonsData} />
+    <CommonCard  title="WoW Boosting" buttons={buttonsData} />
       <PromotionCard/>
       <OfferCard/>
       <RelatedBrand/>
