@@ -1,20 +1,20 @@
 import Brand from "@/component/Brand/Brand";
 
-import CommonLayout ,{ getLayoutData }from "@/component/Layout/CommonLayout";
+import CommonLayout, { getLayoutData } from "@/component/Layout/CommonLayout";
 
-export default function Home({services}) {
-    return (
-        <>
+export default function Home({ services }) {
+  return (
+    <>
       <CommonLayout services={services}>
-      
-        <Brand/>
+
+        <Brand />
       </CommonLayout>
 
-   
-        
-        </>
 
-    );
+
+    </>
+
+  );
 }
 
 export async function getStaticProps() {

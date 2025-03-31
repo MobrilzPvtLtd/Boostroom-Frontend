@@ -1,4 +1,10 @@
-import { Gavel, Mail, PersonStandingIcon, SlidersHorizontal, Users } from "lucide-react";
+import {
+  Gavel,
+  Mail,
+  PersonStandingIcon,
+  SlidersHorizontal,
+  Users,
+} from "lucide-react";
 import React, { useState } from "react";
 import { FaEnvelopeOpen } from "react-icons/fa6";
 
@@ -95,28 +101,28 @@ function SellerList() {
               All Sellers (125)
             </h2>
             <div className="flex items-center space-x-4 bg-[#0F1741] p-2 rounded-lg text-white">
-      <label className="flex items-center space-x-2 cursor-pointer">
-        <span className="text-sm">Online Sellers</span>
-        <div
-          className={`w-10 h-5 flex items-center rounded-full p-1 transition ${
-            onlineSellers ? "bg-yellow-400" : "bg-gray-600"
-          }`}
-          onClick={() => setOnlineSellers(!onlineSellers)}
-        >
-          <div
-            className={`w-4 h-4 bg-white rounded-full shadow-md transform transition ${
-              onlineSellers ? "translate-x-5" : "translate-x-0"
-            }`}
-          />
-        </div>
-      </label>
-      <button className="text-sm hover:text-yellow-400 transition">
-        Recommended
-      </button>
-      <button className="p-2 rounded-lg hover:bg-gray-700 transition">
-        <SlidersHorizontal className="w-5 h-5 text-yellow-400" />
-      </button>
-    </div>
+              <label className="flex items-center space-x-2 cursor-pointer">
+                <span className="text-sm">Online Sellers</span>
+                <div
+                  className={`w-10 h-5 flex items-center rounded-full p-1 transition ${
+                    onlineSellers ? "bg-yellow-400" : "bg-gray-600"
+                  }`}
+                  onClick={() => setOnlineSellers(!onlineSellers)}
+                >
+                  <div
+                    className={`w-4 h-4 bg-white rounded-full shadow-md transform transition ${
+                      onlineSellers ? "translate-x-5" : "translate-x-0"
+                    }`}
+                  />
+                </div>
+              </label>
+              <button className="text-sm hover:text-yellow-400 transition">
+                Recommended
+              </button>
+              <button className="p-2 rounded-lg hover:bg-gray-700 transition">
+                <SlidersHorizontal className="w-5 h-5 text-yellow-400" />
+              </button>
+            </div>
           </div>
 
           {/* Seller List */}
@@ -168,8 +174,11 @@ function SellerList() {
             </div>
           ))}
           <div className="flex justify-center items-center">
-           <button className="bg-yellow-400 p-3 rounded-sm text-black font-bold"> LOAD MORE OFFERS
-            </button> </div>
+            <button className="bg-yellow-400 p-3 rounded-sm text-black font-bold">
+              {" "}
+              LOAD MORE OFFERS
+            </button>{" "}
+          </div>
         </div>
       </div>
     </>

@@ -17,7 +17,7 @@ const StepCard = ({ text, isSelected, onClick }) => (
 const HowItWorksSection = () => {
   const steps = [
     "Browse our catalog and select a desired service",
-    "Complete the payment to proceed with delivery",
+    "Complete the payment to proceed with delivery", 
     "The journey begins!",
     "Confirm the completion of your order",
   ];
@@ -41,7 +41,7 @@ const HowItWorksSection = () => {
         className="absolute top-0 left-0 w-full object-cover"
       /> */}
 
-      <div className="max-w-8xl relative z-1 mx-auto py-16">
+      <div className="max-w-7xl relative z-1 mx-auto py-16">
         {/* Left Column - Text Content */}
         <div className="space-y-6 pb-10 px-20">
           <div className="space-y-3">

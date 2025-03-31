@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Globe, Clock } from "lucide-react";
+import { Globe, Clock, SlidersHorizontal } from "lucide-react";
 
 function OfferCard() {
+    const [onlineSellers, setOnlineSellers] = useState(false);
   const [offers] = useState([
     {
       id: 1,
@@ -17,7 +18,32 @@ function OfferCard() {
   return (
     <>
       <div className="bg-dark-300 p-6 text-white">
-        <div className="text-gray-400 mb-4">About 17,245 results.</div>
+        <div className="text-gray-400 mb-4 flex justify-between items-center">
+          <p>About 17,245 results.</p>
+          <div className="flex items-center space-x-4 ">
+              <label className="flex items-center space-x-2 cursor-pointer">
+                <span className="text-sm">Online Sellers</span>
+                <div
+                  className={`w-10 h-5 flex items-center rounded-full p-1 transition ${
+                    onlineSellers ? "bg-yellow-400" : "bg-gray-600"
+                  }`}
+                  onClick={() => setOnlineSellers(!onlineSellers)}
+                >
+                  <div
+                    className={`w-3 h-3 bg-white rounded-full shadow-md transform transition ${
+                      onlineSellers ? "translate-x-5" : "translate-x-0"
+                    }`}
+                  />
+                </div>
+              </label>
+              <button className="text-sm hover:text-yellow-400 transition">
+                Recommended
+              </button>
+              <button className="p-2 rounded-lg hover:bg-gray-700 transition">
+                <SlidersHorizontal className="w-5 h-5 text-yellow-400" />
+              </button>
+            </div>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {offers.map((offer) => (
