@@ -6,10 +6,18 @@ import SellerList from './SellerList'
 import { ArrowLeft } from 'lucide-react'
 
 function BrandDetails() {
+  const buttonsData = [
+    { label: "Game Coins", count: "12560 offers" },
+    { label: "Boosting", count: "200 offers" },
+    { label: "Coaching", count: "60 offers" },
+    { label: "Items", count: "100 offers" },
+    { label: "Accounts", count: "5 offers" },
+    { label: "Rent A Gamer", count: "5 offers" },
+  ];
   return (
     <>
     <div className="w-full ">
-      <CommonCard />
+      <CommonCard  buttons={buttonsData} />
       
       <div className="flex justify-end bg-dark-300 pt-6 px-6">
         <button className="flex text-sm items-center gap-2 px-2 py-1 border-2 border-yellow-500 text-yellow-500 font-semibold rounded-sm bg-transparent hover:bg-yellow-500 hover:text-black transition">

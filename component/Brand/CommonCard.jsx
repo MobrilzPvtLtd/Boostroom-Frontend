@@ -9,7 +9,7 @@ function CommonCard({title ,buttons}) {
     
 
       <main className=" p-4">
-        <h1 className="text-2xl font-bold text-white mb-6 bg-dark-500 p-3">{title}</h1>
+        {title && <h1 className="text-2xl font-bold text-white mb-6 bg-dark-500 p-3">{title}</h1>}
 
         {/* Button Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">

@@ -9,7 +9,7 @@ function LatestPost() {
   });
   return (
     <>
-      <div className=" h-[80vh] w-full bg-[#042534]  ">
+      <div className=" h-fit w-full bg-[#042534]  ">
         {/* Glass-like container */}
         <div
           className="max-w-md   pt-8 pr-10 rounded-xl  "
