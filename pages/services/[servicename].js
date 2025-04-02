@@ -13,6 +13,13 @@ export default function Home({ services }) {
   const currentService = services.find(
     (service) => service.slugs.some((slug) => slug.slug === servicename)
   );
+   // Redirect to homepage if the service is not found
+   if (!currentService) {
+    if (typeof window !== "undefined") {
+      router.push("/");
+    }
+    return null; // Prevent rendering on the server
+  }
 
   return (
     <>

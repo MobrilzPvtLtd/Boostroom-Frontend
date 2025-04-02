@@ -23,19 +23,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function Home({ services }) {
+export default function Home({ services, hotBoostingGames, trendingTopUpServices }) {
   return (
     <CommonLayout services={services}>
       <HeroSection />
       <PopularServices services={services} />
-      <HotGamesSection />
+      <HotGamesSection hotBoostingGames={hotBoostingGames} />
       <FeatureSection />
       {/* <TestimonialsSection /> */}
-      <TopUpServices />
-      <GiftCardSection />
+      <TopUpServices trendingTopUpServices={hotBoostingGames} /> {/* Pass new data */}
+      <GiftCardSection  giftCards={hotBoostingGames}/>
       <HowItWorksSection />
       <TrendingServices />
-      
       <BlogSection />
       <CTASection /> 
     </CommonLayout>
@@ -44,10 +43,20 @@ export default function Home({ services }) {
 
 export async function getStaticProps() {
   const layoutData = await getLayoutData();
-  
+
+  // API call for hot boosting games
+  const hotGamesResponse = await axiosInstance.get('/hot-boosting-games');
+  const hotBoostingGames = hotGamesResponse.data.data || [];
+
+  // API call for trending top-up services
+  const trendingResponse = await axiosInstance.get('/trending-top-up-services');
+  const trendingTopUpServices = trendingResponse.data.data || [];
+
   return {
     props: {
       services: layoutData.services,
+      hotBoostingGames, // Pass hot boosting games data
+      trendingTopUpServices, // Pass trending top-up services data
     },
     revalidate: layoutData.revalidate,
   };
