@@ -48,7 +48,7 @@ const Sidebar = ({ services }) => {
           {services?.map((service, index) => (
             <Link
               key={index}
-              href={`/${service?.slugs.find((slug) => slug.default)?.slug}`}
+              href={`/services/${service?.slugs.find((slug) => slug.default)?.slug}`}
               className="flex items-center gap-3 p-2 hover:bg-yellow-400 transition-colors "
             >
               <span className="text-cyan-400">

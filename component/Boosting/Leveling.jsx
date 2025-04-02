@@ -3,86 +3,40 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
-const LevelingSection = () => {
+const LevelingSection = ({ service }) => {
   // const [searchQuery, setSearchQuery] = useState('');
 
   return (
-    // <div className="relative bg-teal-950 mt-16 py-16">
-    //   {/* Wave Background */}
-    //   <Image
-    //     src="/image/levelingbg.jpg"
-    //     alt="game"
-    //     className="absolute top-0 left-0 h-full w-full object-cover"
-    //     width={100}
-    //     height={100}
-    //   />
-
-    //   {/* Content Container */}
-    //   <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-    //     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-8 px-12 ">
-    //       {/* Left Content */}
-    //       <div className="flex-1 ">
-    //         {/* Title with Level Up Icon */}
-    //         <div className="flex items-center gap-3 mb-6">
-    //           <h2 className="text-4xl font-bold text-white">Leveling</h2>
-    //             <div className="flex justify-center mt-0.5">
-    //               <Image
-    //                 src="/image/leveling.jpg"
-    //                 alt="Right gaming setup"
-    //                 width={100}
-    //                 height={100}
-    //                 layout="responsive"
-    //                 className="object-cover "
-    //                 priority
-    //               />
-    //           </div>
-    //         </div>
-
-    //         {/* Description */}
-    //         <p className="text-slate-400 text-base leading-relaxed max-w-3xl">
-    //         Always Here for You! Experience hassle-free gaming with our 24/7 Customer Support. Connect with us anytime, anywhere! Always Here for You! Experience hassle-free gaming with our 24/7 Customer Sup-port. Connect with us anytime, anywhere! Always Here for You! Experience hassle-free gaming with our 24/7 Customer Support. Connect with us anytime, anywhere! Always Here for You! Experience has-sle-free gaming with our 24/7 Customer Support. Connect with us anytime, anywhere!
-    //         </p>
-    //       </div>
-
-    //       {/* Right Image */}
-    //       <div className="relative h-60 w-60  my-4">
-    //         <Image
-    //           src="/image/level_pic.jpg"
-    //           alt="Right gaming setup"
-    //           width={200}
-    //           height={200}
-    //           layout="responsive"
-    //           className="object-cover "
-    //           priority
-    //         />
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
     <div className="bg-dark-300 w-full mt-20">
       <div className="px-6 py-6 flex  md:flex-row md:items-center md:justify-between">
         <div className="flex flex-col space-y-4">
           <div className="flex items-center text-gray-300 text-sm">
             <Link href="/" className="hover:text-white">
               <span>
-                <Home className="text-md" />
+                <Home className=" " />
               </span>
             </Link>
             <span className="mx-2">/</span>
-            <span className="text-md">boosting</span>
+            <span className="text-md">{service?.name}</span>
           </div>
 
           {/* Logo and Title */}
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4  justify-between max-w-7xl mx-auto">
-        <div className="flex items-center bg-dark-500 p-5">
-          <span className="mr-3">
-            <BoxIcon />
+        <div className="flex gap-5 items-center bg-dark-500 p-4">
+          <span className="text-cyan-400">
+            <Image
+              src={service?.service_icon}
+              alt={service?.name}
+              width={34}
+              height={34}
+              className="text-cyan-400"
+            />
           </span>
-          <h1 className="text-white text-3xl font-bold">Boosting</h1>
+          <h1 className="text-white text-2xl font-bold">{service?.name}</h1>
         </div>
-        <div className=" bg-dark-500 p-5">
+        <div className=" bg-dark-500 p-4">
           <div className="relative w-full">
             <input
               type="text"

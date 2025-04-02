@@ -26,7 +26,7 @@ const GameCard = ({ title, imageSrc }) => (
   </div>
 );
 
-const TopUpServices = () => {
+const TopUpServices = ({ service }) => {
   const games = [
     { title: "World of Warcraft", imageSrc: "/image/worldOfWarcraft.png" },
     { title: "Valorant", imageSrc: "/image/valorent.png" },
@@ -56,7 +56,7 @@ const TopUpServices = () => {
         {/* Section Header */}
         <div className="text-center mb-12 flex flex-col justify-center items-center">
           <h2 className="text-2xl font-bold w-fit text-slate-100 px-40 mb-6 pb-3 border-b-2 border-orange-300">
-            Trending Boosting
+            Trending {service?.name}
           </h2>
         </div>
 

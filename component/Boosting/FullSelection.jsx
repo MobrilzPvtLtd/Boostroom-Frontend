@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-const FullSelection = () => {
+const FullSelection = ({ service}) => {
   const games = {
     'A': [
       { title: "World of Warcraft", imageSrc: "/image/worldOfWarcraft.png" },
@@ -75,7 +75,7 @@ const FullSelection = () => {
     <div className="bg-dark-300 min-h-screen p-12">
         <div className="text-center mb-12 flex flex-col justify-center items-center">
          <h2 className="text-3xl font-bold w-fit text-white px-40 mb-6 pb-3 border-b border-orange-300">
-           All Boosting
+           All { service?.name }
            </h2>
            {/* <div className="max-w-5xl mx-auto py-2 ">
              <p className="text-gray-400 mb-2">
