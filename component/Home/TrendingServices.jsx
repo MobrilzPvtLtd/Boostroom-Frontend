@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import TitleBar from "../common/TitleBar";
 
 const ServiceCard = ({ title, imageSrc, gameList = [] }) => (
   <div className="bg-dark-500 rounded overflow-hidden">
@@ -73,16 +74,17 @@ const TrendingServices = () => {
     <div className="bg-[#131746] py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6 pb-3 border-b border-orange-300 inline-block px-12">
+        <div className=" mb-12 flex flex-col justify-center items-center">
+          {/* <h2 className="text-2xl font-bold text-white mb-6 pb-3 border-b border-orange-300 inline-block px-12">
             Trending Game Services
-          </h2>
+          </h2> */}
+          <TitleBar title={'Trending Game Services'} />
           <div className="max-w-5xl mx-auto font-normal tracking-wide py-2 text-sm">
-            <p className="text-gray-400 mb-2">
+            <p className="text-gray-400 mb-2 text-center">
               Check the forefront of trending game services section, showcasing
               the latest in demand services that gamers are seeking.
             </p>
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-center">
               Stay ahead of the curve and explore the most popular and emerging
               services that set the trends in the gaming world.
             </p>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import TitleBar from '../common/TitleBar';
  
 const ServiceCard = ({ imgSrc, title }) => (
   <div className="bg-[#0E1237] px-6 py-6 rounded  transition-all duration-300 cursor-pointer group">
@@ -26,9 +27,10 @@ const PopularServices = ({services}) => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 flex flex-col justify-center items-center">
-          <h2 className="text-2xl font-bold w-fit text-slate-100 px-20 mb-6 pb-3 border-b-2 border-[#8F7326]">
+          {/* <h2 className="text-2xl font-bold w-fit text-slate-100 px-20 mb-6 pb-3 border-b-2 border-[#8F7326]">
             View Popular Services
-          </h2>
+          </h2> */}
+          <TitleBar title={'View Popular Services'}/>
           <div className="max-w-4xl mx-auto text-sm font-normal tracking-wide py-2">
             <p className="text-gray-400 mb-2">
               Step into our marketplace for gamers and explore the most popular services designed to amplify your gaming experience.

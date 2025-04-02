@@ -105,6 +105,7 @@
 import React from "react";
 import { Grid } from "lucide-react";
 import Image from "next/image";
+import TitleBar from "../common/TitleBar";
 
 const GameCard = ({ title, imageSrc }) => (
   <div className="relative group overflow-hidden rounded-lg cursor-pointer">
@@ -158,9 +159,10 @@ const GiftCardSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 flex flex-col justify-center items-center">
-          <h2 className="text-2xl font-bold w-fit text-slate-100 px-40 mb-6 pb-3 border-b border-orange-300">
+          {/* <h2 className="text-2xl font-bold w-fit text-slate-100 px-40 mb-6 pb-3 border-b border-orange-300">
             Trending Gift Cards
-          </h2>
+          </h2> */}
+          <TitleBar title={'Trending Gift Cards'}/>
           <div className="max-w-5xl mx-auto py-2 font-normal tracking-wide text-sm">
             <p className="text-gray-400 mb-2">
               Explore our comprehensive selection of gift cards in the ultimate

@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid } from "lucide-react";
 import Image from "next/image";
+import TitleBar from "../common/TitleBar";
 
 const GameCard = ({ title, imageSrc }) => (
   <div className="relative group overflow-hidden rounded cursor-pointer">
@@ -54,9 +55,10 @@ const HotGamesSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 flex flex-col justify-center items-center">
-          <h2 className="text-2xl font-bold w-fit text-slate-100 px-40 mb-6 pb-3 border-b-2 border-[#8F7326]">
+          {/* <h2 className="text-2xl font-bold w-fit text-slate-100 px-40 mb-6 pb-3 border-b-2 border-[#8F7326]">
             Hot Boosting Games
-          </h2>
+          </h2> */}
+          <TitleBar title={'Hot Boosting Games'}/>
           <div className="max-w-5xl mx-auto py-2  text-sm font-normal tracking-wide ">
             <p className="text-gray-400 mb-2">
               Browse our selection of the most popular games, handpicked for

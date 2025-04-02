@@ -1,5 +1,6 @@
 
 import React from 'react';
+import TitleBar from '../common/TitleBar';
 
 const FullSelection = ({ service}) => {
   const games = {
@@ -74,9 +75,11 @@ const FullSelection = ({ service}) => {
   return (
     <div className="bg-dark-300 min-h-screen p-12">
         <div className="text-center mb-12 flex flex-col justify-center items-center">
-         <h2 className="text-3xl font-bold w-fit text-white px-40 mb-6 pb-3 border-b border-orange-300">
+         {/* <h2 className="text-3xl font-bold w-fit text-white px-40 mb-6 pb-3 border-b border-orange-300">
            All { service?.name }
-           </h2>
+           </h2> */}
+
+<TitleBar  title={` All ${service?.name}`}/>
            {/* <div className="max-w-5xl mx-auto py-2 ">
              <p className="text-gray-400 mb-2">
                Browse our selection of the most popular games, handpicked for their compatibility with our services.

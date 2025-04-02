@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid } from "lucide-react";
 import Image from "next/image";
+import TitleBar from "../common/TitleBar";
 
 const GameCard = ({ title, imageSrc }) => (
   <div className="relative group overflow-hidden rounded cursor-pointer">
@@ -54,9 +55,11 @@ const TopUpServices = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 flex flex-col justify-center items-center">
-          <h2 className="text-2xl font-bold w-fit text-slate-100 px-40 mb-6 pb-3 border-b-2 border-orange-300">
+          {/* <h2 className="text-2xl font-bold w-fit text-slate-100 px-40 mb-6 pb-3 border-b-2 border-orange-300">
             Trending Top Up Services
-          </h2>
+          </h2> */}
+
+          <TitleBar title={'Trending Top Up Services'}/>
           <div className="max-w-4xl mx-auto py-2  text-sm font-normal tracking-wide ">
             <p className="text-gray-400 mb-2">
               Discover the best in Top-Up services on our dedicated marketplace
