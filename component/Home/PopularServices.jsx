@@ -14,7 +14,7 @@ const ServiceCard = ({ imgSrc, title }) => (
           className="text-cyan-400"
         />
       </div>
-      <h3 className="text-white text-lg font-medium ">{title}</h3>
+      <h3 className="text-white text-base font-medium ">{title}</h3>
     </div>
   </div>
 );

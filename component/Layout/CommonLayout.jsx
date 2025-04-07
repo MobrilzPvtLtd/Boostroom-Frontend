@@ -4,6 +4,9 @@ import Header from '../common/Header';
 import { axiosInstance } from "@/utils/axios";
 import Footer from '../common/Footer';
 
+// Access the revalidate time from the environment variable
+const REVALIDATE_TIME = process.env.REACT_APP_REVALIDATE_TIME || 3600;
+
 const Layout = ({ children, services }) => {
   return (
     <div className="w-full flex">
@@ -28,12 +31,12 @@ export async function getLayoutData() {
 
     return {
       services,
-      revalidate: 3600,
+      revalidate: REVALIDATE_TIME, // Use the environment variable
     };
   } catch (error) {
     return {
       services: [],
-      revalidate: 3600,
+      revalidate: REVALIDATE_TIME, // Use the environment variable
     };
   }
 }

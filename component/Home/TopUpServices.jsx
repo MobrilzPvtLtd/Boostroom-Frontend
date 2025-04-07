@@ -22,9 +22,8 @@ const GameCard = ({ title, imageSrc }) => (
   </div>
 );
 
-const TopUpServices = ({ trendingTopUpServices }) => {
-  // Limit to top 14 services
-  const displayedServices = trendingTopUpServices.slice(0, 14);
+const TopUpServices = ({ topUpServices }) => {
+  const displayedServices = topUpServices.slice(0, 14);
 
   return (
     <div className="bg-dark-300 pb-20 pt-10 px-12">
