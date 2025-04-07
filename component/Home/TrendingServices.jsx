@@ -4,8 +4,8 @@ import { useRouter } from "next/navigation"; // Import useRouter for navigation
 import TitleBar from "../common/TitleBar";
 
 const ServiceCard = ({ title, imageSrc, gameList = [], serviceSlug }) => {
-  const router = useRouter(); // Initialize useRouter for navigation
-  console.log("serviceSlug:", serviceSlug); // Log the game list for debugging
+  const router = useRouter(); 
+   
   return (
     <div className="bg-dark-500 rounded overflow-hidden">
       {/* Header */}
