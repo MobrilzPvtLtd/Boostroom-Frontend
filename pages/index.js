@@ -23,11 +23,24 @@ const geistMono = Geist_Mono({
 });
 
 // Helper function to filter and flatten brands by service name
-const getGamesByService = (brands, serviceName) => {
-  return brands
-    .filter(brand => brand.service.name === serviceName)
-    .flatMap(service => service.brands);
-};
+function getGamesByService(brandsData, serviceName) {
+  // Find the service object that matches the given serviceName
+  const serviceData = brandsData.find(item => item.service.name === serviceName);
+
+  // If service is found, return the formatted object; otherwise return empty defaults
+  if (serviceData) {
+    return {
+      service: serviceData.service, // Return the full service object
+      brands: serviceData.brands    // Return the array of brands
+    };
+  }
+
+  // Return default empty object if service is not found
+  return {
+    service: {},
+    brands: []
+  };
+}
 
 export default function Home({ services, brands }) {
   // Use the helper function for each category
@@ -39,7 +52,7 @@ export default function Home({ services, brands }) {
   const coachingGames = getGamesByService(brands, 'Coaching');
   const skinGames = getGamesByService(brands, 'Skins');
 
-  console.log("Boosting Games:", boostingGames);
+  // console.log("Boosting Games:", boostingGames);
 
   return (
     <CommonLayout services={services}>

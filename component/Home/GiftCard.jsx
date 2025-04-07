@@ -1,30 +1,39 @@
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
-const GameCard = ({ title, imageSrc }) => (
-  <div className="relative group overflow-hidden rounded-lg cursor-pointer">
-    {/* Background Image */}
+const GameCard = ({ game, services }) => {
+  const router = useRouter(); // Initialize useRouter inside GameCard
+
+  return (
     <div
-      className="w-full h-28 bg-cover bg-center"
-      style={{
-        backgroundImage: imageSrc ? `url(${imageSrc})` : "none",
-        backgroundColor: "#0E1237",
-      }}
-    />
+      className="relative group overflow-hidden rounded cursor-pointer"
+      onClick={() => router.push(`/categories/${game.slug}/${services.slug}`)} // Navigate to the game category
+    >
+      {/* Background Image */}
+      <div
+        className="w-full h-28 bg-cover bg-center"
+        style={{
+          backgroundImage: game.image ? `url(${game.image})` : "none",
+          backgroundColor: "#0E1237",
+        }}
+      />
 
-    {/* Title */}
-    <div className="absolute bottom-6 left-0 right-0 p-4 flex justify-center ">
-      <h3 className="text-white text-xl font-semibold">{title}</h3>
+      {/* Title */}
+      <div className="absolute bottom-6 left-0 right-0 p-4 flex justify-center">
+        <h3 className="text-white text-xl font-semibold">{game.name}</h3>
+      </div>
+
+      {/* Hover Effect */}
+      <div className="absolute inset-0 bg-cyan-500/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
     </div>
+  );
+};
 
-    {/* Hover Effect */}
-    <div className="absolute inset-0 bg-cyan-500/10 opacity-0 transition-opacity duration-300" />
-  </div>
-);
 
 const GiftCardSection = ({ giftCards }) => {
   // Limit to top 14 gift cards
-  const displayedGiftCards = giftCards.slice(0, 14);
+  const displayedGiftCards = giftCards.brands.slice(0, 14);
 
   return (
     <div className="bg-dark-300 pb-20 pt-10 px-12">
@@ -49,8 +58,8 @@ const GiftCardSection = ({ giftCards }) => {
 
         {/* Gift Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-          {displayedGiftCards.map((card, index) => (
-            <GameCard key={index} title={card.name} imageSrc={card.image} />
+          {displayedGiftCards.map((game, index) => (
+            <GameCard key={index} game={game} services={giftCards.service} />
           ))}
 
           {/* Show All Gift Cards Card */}
