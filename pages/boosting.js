@@ -10,8 +10,8 @@ export default function Home({ services }) {
     <>
       <CommonLayout services={services}>
         <LevelingSection />
-        <TrendingNow />
-        <FullSelection/>
+        {/* <TrendingNow /> */}
+        {/* <FullSelection/> */}
         <TextArea/>
         {/* <FeatureSection/> */} 
       </CommonLayout>
