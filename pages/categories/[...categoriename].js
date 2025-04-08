@@ -2,10 +2,10 @@ import Brand from "@/component/Brand/Brand";
 import CommonLayout, { getLayoutData } from "@/component/Layout/CommonLayout";
 import { axiosInstance } from "@/utils/axios"; // Import axiosInstance
 
-export default function Home({ services }) {
+export default function Home({ services, selectedService }) {
   return (
     <>
-      <CommonLayout services={services}>
+      <CommonLayout services={services} selectedService={selectedService}>
         <Brand />
       </CommonLayout>
     </>
@@ -45,6 +45,7 @@ export async function getStaticProps({ params }) {
     return {
       props: {
         services: layoutData.services,
+        selectedService: service, // Pass the selected service to the component
         gamename: gameSlug,
       },
       revalidate: layoutData.revalidate,
@@ -60,7 +61,6 @@ export async function getStaticPaths() {
     // Fetch the list of games from the /brands endpoint
     const response = await axiosInstance.get('/brands');
     const games = response.data.brands;
-    // console.log(games, "kujygjhh" ); // Log the games data for debugging
 
     const paths = [];
 
