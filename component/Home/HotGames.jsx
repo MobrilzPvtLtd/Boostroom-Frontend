@@ -58,13 +58,15 @@ const HotGamesSection = ({ boostingServices }) => {
         {/* Games Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
           {displayedGames?.map((game, index) => (
-            <GameCard key={index} game={game} services={boostingServices.service} />
+            <GameCard
+              key={index}
+              game={game}
+              services={boostingServices.service}
+            />
           ))}
 
           {/* Show All Games Card */}
-          <div
-            className="relative rounded-lg pt-2 bg-[#0E1237] transition-colors duration-300 cursor-pointer h-28 flex flex-col items-center justify-center"
-          >
+          <div className="relative rounded-lg pt-2 bg-[#0E1237] transition-colors duration-300 cursor-pointer h-28 flex flex-col items-center justify-center">
             <Image
               src="/image/box.png" // Replace with the correct path for the "Show All Games" image
               alt="Show All Games"
