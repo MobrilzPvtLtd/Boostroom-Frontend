@@ -13,8 +13,8 @@ export default function Home({ services }) {
   const currentService = services.find(
     (service) => service.slugs.some((slug) => slug.slug === servicename)
   );
-   // Redirect to homepage if the service is not found
-   if (!currentService) {
+  // Redirect to homepage if the service is not found
+  if (!currentService) {
     if (typeof window !== "undefined") {
       router.push("/");
     }
@@ -23,7 +23,7 @@ export default function Home({ services }) {
 
   return (
     <>
-      <CommonLayout services={services}>
+      <CommonLayout services={services} selectedService={currentService}>
         <LevelingSection service={currentService} />
         <TrendingNow service={currentService} />
         <FullSelection service={currentService} />

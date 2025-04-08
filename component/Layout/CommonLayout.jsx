@@ -7,11 +7,11 @@ import Footer from '../common/Footer';
 // Access the revalidate time from the environment variable
 const REVALIDATE_TIME = process.env.REACT_APP_REVALIDATE_TIME || 3600;
 
-const Layout = ({ children, services }) => {
+const Layout = ({ children, services, selectedService }) => {
   return (
     <div className="w-full flex">
       <div className="w-[15.5%] h-[100vh] overflow-auto custom-scrollbar">
-        <Sidebar services={services} />
+        <Sidebar services={services} selectedService={selectedService} />
       </div>
       <div className="w-[84.5%] h-[100vh] overflow-auto custom-scrollbar">
         <Header />
