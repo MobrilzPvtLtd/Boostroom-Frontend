@@ -66,8 +66,7 @@ export async function getStaticProps({ params }) {
   let fullSelectionData = null;
 
   if (currentService) {
-    try {
-      // Fetch trending data
+    try { 
       const trendingResponse = await axiosInstance.post('/get-brands-by-service-ids', {
         service_ids: [currentService.id],
       });
